@@ -129,6 +129,9 @@ include-files = [
   "NOTICE",
   "README.md",
   "bin/build",
+  "bin/class-counter",
   "bin/detect",
+  "bin/link-local-dns",
+  "bin/security-providers-configurer",
   "buildpack.toml",
 ]
