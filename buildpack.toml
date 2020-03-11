@@ -103,7 +103,7 @@ id      = "jvmkill"
 name    = "JVMKill Agent"
 version = "1.16.0"
 uri     = "https://java-buildpack.cloudfoundry.org/jvmkill/bionic/x86_64/jvmkill-1.16.0-RELEASE.so"
-sha256  = "placeholder"
+sha256  = "a3092627b082cb3cdbbe4b255d35687126aa604e6b613dcda33be9f7e1277162"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
