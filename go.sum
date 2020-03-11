@@ -46,6 +46,8 @@ github.com/paketo-buildpacks/libjvm v1.3.1 h1:EActmGtPp63AZapWBIee5zPxLM4QlAyRlF
 github.com/paketo-buildpacks/libjvm v1.3.1/go.mod h1:fyBATyTXeKua2HxW4YMiep7ozJjDOatEUHv4KuDYC90=
 github.com/paketo-buildpacks/libpak v1.6.0 h1:r5diaDRRlV61H7Y879oZPUF90yFn31I0hl5wmrUKLe8=
 github.com/paketo-buildpacks/libpak v1.6.0/go.mod h1:6tuMyCPwmivHF0vOxNYm759bwHFThC8c3IGgAdS2beQ=
+github.com/paketo-buildpacks/libpak v1.7.0 h1:S/PcpJyu/RkxZT3em7hoJTn1RJJ7xMoQBCLuFePmllA=
+github.com/paketo-buildpacks/libpak v1.7.0/go.mod h1:6tuMyCPwmivHF0vOxNYm759bwHFThC8c3IGgAdS2beQ=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/sclevine/spec v1.4.0 h1:z/Q9idDcay5m5irkZ28M7PtQM4aOISzOpj4bUPkDee8=
