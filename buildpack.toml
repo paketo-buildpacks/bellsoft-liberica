@@ -30,8 +30,8 @@ jre = "11.*"
 id      = "jre"
 name    = "BellSoft Liberica JRE"
 version = "8.0.242"
-uri     = "placeholder"
-sha256  = "placeholder"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u242+7/bellsoft-jre8u242+7-linux-amd64.tar.gz"
+sha256  = "7b4e979ce3588bb057377c9a7a0478752af1610065728e20941754015ebd04fd"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
