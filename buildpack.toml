@@ -115,7 +115,7 @@ id      = "memory-calculator"
 name    = "Memory Calculator"
 version = "4.0.0"
 uri     = "https://java-buildpack.cloudfoundry.org/memory-calculator/bionic/x86_64/memory-calculator-4.0.0.tgz"
-sha256  = "placeholder"
+sha256  = "90d40eab6959a7b4059c6409c4505040e8a04f75a481f7282e53430df3edda3e"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
