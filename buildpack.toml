@@ -78,8 +78,8 @@ stacks  = [ "io.buildpacks.stacks.bionic" ]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
 version = "11.0.6"
-uri     = "placeholder"
-sha256  = "placeholder"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.6+10/bellsoft-jdk11.0.6+10-linux-amd64.tar.gz"
+sha256  = "6e61b37ad963546b06ebe14f9b702007410f121ff80214ac0cc33ea9770d9755"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
