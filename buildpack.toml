@@ -22,17 +22,105 @@ version = "{{.Version}}"
 [[stacks]]
 id = "io.buildpacks.stacks.bionic"
 
-# [[metadata.dependencies]]
-# id      = ""
-# name    = ""
-# version = ""
-# uri     = ""
-# sha256  = ""
-# stacks  = [ "io.buildpacks.stacks.bionic" ]
+[metadata.default-versions]
+jdk = "11.*"
+jre = "11.*"
 
-#   [[metadata.dependencies.licenses]]
-#   type = "<TYPE>"
-#   uri  = "<URI>"
+[[metadata.dependencies]]
+id      = "jre"
+name    = "BellSoft Liberica JRE"
+version = "8.0.242"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jre"
+name    = "BellSoft Liberica JRE"
+version = "11.0.6"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jre"
+name    = "BellSoft Liberica JRE"
+version = "13.0.2"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jdk"
+name    = "BellSoft Liberica JDK"
+version = "8.0.242"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jdk"
+name    = "BellSoft Liberica JDK"
+version = "11.0.6"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jdk"
+name    = "BellSoft Liberica JDK"
+version = "13.0.2"
+uri     = "placeholder"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jvmkill"
+name    = "JVMKill Agent"
+version = "1.16.0"
+uri     = "https://java-buildpack.cloudfoundry.org/jvmkill/bionic/x86_64/jvmkill-1.16.0-RELEASE.so"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "Apache-2.0"
+  uri  = "https://github.com/cloudfoundry/jvmkill/blob/master/LICENSE"
+
+[[metadata.dependencies]]
+id      = "memory-calculator"
+name    = "Memory Calculator"
+version = "4.0.0"
+uri     = "https://java-buildpack.cloudfoundry.org/memory-calculator/bionic/x86_64/memory-calculator-4.0.0.tgz"
+sha256  = "placeholder"
+stacks  = [ "io.buildpacks.stacks.bionic" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "Apache-2.0"
+  uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/master/LICENSE"
 
 [metadata]
 pre-package   = "scripts/build.sh"
