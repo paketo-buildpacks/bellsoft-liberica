@@ -22,6 +22,5 @@ import (
 )
 
 func main() {
-	d := libjvm.Detect{}
-	libcnb.Detect(d.Detect)
+	libcnb.Detect(libjvm.Detect{})
 }

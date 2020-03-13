@@ -25,6 +25,5 @@ import (
 )
 
 func main() {
-	b := libjvm.Build{Logger: bard.NewLogger(os.Stdout)}
-	libpak.Build(b.Build)
+	libpak.Build(libjvm.Build{Logger: bard.NewLogger(os.Stdout)})
 }
