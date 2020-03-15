@@ -1,4 +1,4 @@
-# `bellsoft-liberica`
+# `paketo-buildpacks/bellsoft-liberica`
 The Paketo BellSoft Liberica Buildpack is a Cloud Native Buildpack that provides the BellSoft Liberica implementations of JREs and JDKs.
 
 This buildpack is designed to work in collaboration with other buildpacks which request contributions of JREs and JDKs.
