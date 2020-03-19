@@ -53,9 +53,9 @@ stacks  = [ "io.buildpacks.stacks.bionic" ]
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "13.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/13.0.2+9/bellsoft-jre13.0.2+9-linux-amd64.tar.gz"
-sha256  = "df67873e50bae30e1a6b8cbfe886cf46771f67b2e9d0cf8b9da41645b766d83b"
+version = "14"
+uri     = "placeholder"
+sha256  = "placeholder"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
@@ -89,9 +89,9 @@ stacks  = [ "io.buildpacks.stacks.bionic" ]
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "13.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/13.0.2+9/bellsoft-jdk13.0.2+9-linux-amd64.tar.gz"
-sha256  = "3ae9d14857bd3a371f0c0aab056a6daa06dcad79336b817bc2bbd2b7f0c32158"
+version = "14"
+uri     = "placeholder"
+sha256  = "placeholder"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
