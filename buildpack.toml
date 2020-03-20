@@ -53,9 +53,9 @@ stacks  = [ "io.buildpacks.stacks.bionic" ]
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "14"
-uri     = "placeholder"
-sha256  = "placeholder"
+version = "14.0.0"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/14/bellsoft-jre14+36-linux-amd64.tar.gz"
+sha256  = "5e1ef3a8d89d24619540849a7f644549749fba1c1d5e7d2f4dc9e3c882404d38"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
