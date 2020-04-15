@@ -64,9 +64,9 @@ stacks  = [ "io.buildpacks.stacks.bionic" ]
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "8.0.242"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u242+7/bellsoft-jdk8u242+7-linux-amd64.tar.gz"
-sha256  = "2341b40fa167b58d4a6f0f6523ffc289a1542931f6489efe8ba43065b0073ff4"
+version = "8.0.252"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u252+9/bellsoft-jdk8u252+9-linux-amd64.tar.gz"
+sha256  = "0654d01fbf03e0bf34606d416fccf05552a8a71c9776535b3dad583c9fe654cc"
 stacks  = [ "io.buildpacks.stacks.bionic" ]
 
   [[metadata.dependencies.licenses]]
