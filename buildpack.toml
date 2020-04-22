@@ -15,9 +15,10 @@
 api = "0.2"
 
 [buildpack]
-id      = "paketo-buildpacks/bellsoft-liberica"
-name    = "Paketo BellSoft Liberica Buildpack"
-version = "{{.version}}"
+id       = "paketo-buildpacks/bellsoft-liberica"
+name     = "Paketo BellSoft Liberica Buildpack"
+version  = "{{.version}}"
+homepage = "https://github.com/paketo-buildpacks/bellsoft-liberica"
 
 [[stacks]]
 id = "io.buildpacks.stacks.bionic"
