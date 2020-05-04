@@ -125,6 +125,18 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
   type = "Apache-2.0"
   uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/master/LICENSE"
 
+[[metadata.dependencies]]
+id      = "openssl-security-provider"
+name    = "OpenSSL Security Provider"
+version = "0.0.0"
+uri     = "https://jitpack.io/com/github/paketo-buildpacks/openssl-security-provider/1.0.2/openssl-security-provider-1.0.2.jar"
+sha256  = "324b740075772a2098fa36f3b52d72ebfd2b73ef0d2b7609a37e546e05407344"
+stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "Apache-2.0"
+  uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/master/LICENSE"
+
 [metadata]
 pre-package   = "scripts/build.sh"
 include-files = [
