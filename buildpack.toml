@@ -128,7 +128,7 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "openssl-security-provider"
 name    = "OpenSSL Security Provider"
-version = "0.0.0"
+version = "1.0.2"
 uri     = "https://jitpack.io/com/github/paketo-buildpacks/openssl-security-provider/1.0.2/openssl-security-provider-1.0.2.jar"
 sha256  = "324b740075772a2098fa36f3b52d72ebfd2b73ef0d2b7609a37e546e05407344"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
