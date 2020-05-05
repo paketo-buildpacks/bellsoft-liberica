@@ -147,6 +147,7 @@ include-files = [
   "bin/class-counter",
   "bin/detect",
   "bin/link-local-dns",
+  "bin/main",
   "bin/security-providers-configurer",
   "buildpack.toml",
 ]

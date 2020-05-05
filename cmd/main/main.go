@@ -25,5 +25,8 @@ import (
 )
 
 func main() {
-	libpak.Build(libjvm.Build{Logger: bard.NewLogger(os.Stdout)})
+	libpak.Main(
+		libjvm.Detect{},
+		libjvm.Build{Logger: bard.NewLogger(os.Stdout)},
+	)
 }
