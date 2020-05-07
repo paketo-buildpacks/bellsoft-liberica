@@ -26,8 +26,25 @@ id = "io.buildpacks.stacks.bionic"
 [[stacks]]
 id = "org.cloudfoundry.stacks.cflinuxfs3"
 
-[metadata.default-versions]
-java = "11.*"
+[[metadata.configurations]]
+name        = "BPL_JVM_HEAD_ROOM"
+description = "the headroom in memory calculation"
+default     = "0"
+
+[[metadata.configurations]]
+name        = "BPL_JVM_LOADED_CLASS_COUNT"
+description = "the number of loaded classes in memory calculation"
+default     = "35% of classes"
+
+[[metadata.configurations]]
+name        = "BPL_JVM_THREAD_COUNT"
+description = "the number of threads in memory calculation"
+default     = "250"
+
+[[metadata.configurations]]
+name        = "BP_JVM_VERSION"
+description = "the Java version"
+default     = "11.*"
 
 [[metadata.dependencies]]
 id      = "jre"

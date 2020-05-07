@@ -32,10 +32,10 @@ The buildpack will do the following if a JRE is requested:
 ## Configuration
 | Environment Variable | Description
 | -------------------- | -----------
-| `$BP_JAVA_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so typically it would configured to a wildcard such as `8.*`.
-| `$BPL_HEAD_ROOM` | Configure the percentage of headroom the memory calculator will allocated.  Defaults to `0`.
-| `$BPL_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
-| `$BPL_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
+| `$BP_JVM_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so typically it would configured to a wildcard such as `8.*`.
+| `$BPL_JVM_HEAD_ROOM` | Configure the percentage of headroom the memory calculator will allocated.  Defaults to `0`.
+| `$BPL_JVM_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
+| `$BPL_JVM_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
 
 ## License
 This buildpack is released under version 2.0 of the [Apache License][a].
