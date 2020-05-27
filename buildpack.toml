@@ -30,21 +30,25 @@ id = "org.cloudfoundry.stacks.cflinuxfs3"
 name        = "BPL_JVM_HEAD_ROOM"
 description = "the headroom in memory calculation"
 default     = "0"
+launch      = true
 
 [[metadata.configurations]]
 name        = "BPL_JVM_LOADED_CLASS_COUNT"
 description = "the number of loaded classes in memory calculation"
 default     = "35% of classes"
+launch      = true
 
 [[metadata.configurations]]
 name        = "BPL_JVM_THREAD_COUNT"
 description = "the number of threads in memory calculation"
 default     = "250"
+launch      = true
 
 [[metadata.configurations]]
 name        = "BP_JVM_VERSION"
 description = "the Java version"
 default     = "11.*"
+build       = true
 
 [[metadata.dependencies]]
 id      = "jre"
