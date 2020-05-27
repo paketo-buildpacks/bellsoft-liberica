@@ -7,5 +7,3 @@ require (
 	github.com/paketo-buildpacks/libpak v1.34.0
 	golang.org/x/sys v0.0.0-20200523222454-059865788121 // indirect
 )
-
-replace github.com/paketo-buildpacks/libpak => ../libpak
