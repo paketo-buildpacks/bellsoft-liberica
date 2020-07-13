@@ -132,7 +132,7 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 
   [[metadata.dependencies.licenses]]
   type = "Apache-2.0"
-  uri  = "https://github.com/cloudfoundry/jvmkill/blob/master/LICENSE"
+  uri  = "https://github.com/cloudfoundry/jvmkill/blob/main/LICENSE"
 
 [[metadata.dependencies]]
 id      = "memory-calculator"
@@ -144,7 +144,7 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 
   [[metadata.dependencies.licenses]]
   type = "Apache-2.0"
-  uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/master/LICENSE"
+  uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/main/LICENSE"
 
 [metadata]
 pre-package   = "scripts/build.sh"
