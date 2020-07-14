@@ -137,9 +137,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "memory-calculator"
 name    = "Memory Calculator"
-version = "4.0.0"
-uri     = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v4.0.0/memory-calculator-4.0.0.tgz"
-sha256  = "90d40eab6959a7b4059c6409c4505040e8a04f75a481f7282e53430df3edda3e"
+version = "4.1.0"
+uri     = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v4.1.0/memory-calculator-4.1.0.tgz"
+sha256  = "0ba6fa26b32e4b906ab460a7cdb70ebded95ea353fdda93bd7f5792300b9cd43"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
