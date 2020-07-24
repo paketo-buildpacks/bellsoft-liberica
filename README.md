@@ -37,6 +37,14 @@ The buildpack will do the following if a JRE is requested:
 | `$BPL_JVM_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
 | `$BPL_JVM_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
 
+## Bindings
+The buildpack optionally accepts the following bindings:
+
+### Type: `dependency-mapping`
+|Key                   | Value   | Description
+|----------------------|---------|------------
+|`<dependency-digest>` | `<uri>` | If needed, the buildpack will fetch the dependency with digest `<dependency-digest>` from `<uri>`
+
 ## License
 This buildpack is released under version 2.0 of the [Apache License][a].
 
