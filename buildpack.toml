@@ -53,9 +53,9 @@ build       = true
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "8.0.262"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u262+10/bellsoft-jre8u262+10-linux-amd64.tar.gz"
-sha256  = "5592cf8d42130c711efca194b9a1acb54bf426bb9cbe21535905f03dff342c17"
+version = "8.0.265"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u265+1/bellsoft-jre8u265+1-linux-amd64.tar.gz"
+sha256  = "a754ed4e922630d18ec382e810460009a176e1cb9d2955b200e2dca972f6702e"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
