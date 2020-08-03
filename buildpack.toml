@@ -50,6 +50,11 @@ description = "the Java version"
 default     = "11.*"
 build       = true
 
+[[metadata.configurations]]
+name        = "JAVA_OPTS"
+description = "the flags that influence JVM memory configuration at launch"
+launch      = true
+
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
