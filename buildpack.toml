@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api = "0.2"
+api = "0.4"
 
 [buildpack]
 id       = "paketo-buildpacks/bellsoft-liberica"
@@ -51,8 +51,8 @@ default     = "11.*"
 build       = true
 
 [[metadata.configurations]]
-name        = "JAVA_OPTS"
-description = "the flags that influence JVM memory configuration at launch"
+name        = "JAVA_TOOL_OPTIONS"
+description = "the JVM launch flags"
 launch      = true
 
 [[metadata.dependencies]]
