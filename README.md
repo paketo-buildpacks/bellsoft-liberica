@@ -32,7 +32,7 @@ The buildpack will do the following if a JRE is requested:
 ## Configuration
 | Environment Variable | Description
 | -------------------- | -----------
-| `$BP_JVM_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so typically it would configured to a wildcard such as `8.*`.
+| `$BP_JVM_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so, it's best to use a wildcard such as `8.*`.<br/>  If you would like to to pin the exact version used, consider pinning your builder image, e.g. instead of `gcr.io/paketo-buildpacks/builder:base` use `gcr.io/paketo-buildpacks/builder:0.0.389-base`. The latest version can be found via the web interface of GCR, e.g. [here](https://gcr.io/paketo-buildpacks/builder). The corresponding bellsoft-liberica version is listed the builder image's label `io.buildpacks.builder.metadata`, so either pull the image and `docker image inspect` or use [`skopeo inspect`](https://github.com/containers/skopeo). The JDK & JRE versions corresponding to the buildpack versions can be found in [releases](https://github.com/paketo-buildpacks/bellsoft-liberica/releases).
 | `$BPL_JVM_HEAD_ROOM` | Configure the percentage of headroom the memory calculator will allocated.  Defaults to `0`.
 | `$BPL_JVM_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
 | `$BPL_JVM_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
