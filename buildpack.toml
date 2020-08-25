@@ -139,18 +139,6 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
   type = "Apache-2.0"
   uri  = "https://github.com/cloudfoundry/jvmkill/blob/main/LICENSE"
 
-[[metadata.dependencies]]
-id      = "memory-calculator"
-name    = "Memory Calculator"
-version = "4.1.0"
-uri     = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v4.1.0/memory-calculator-4.1.0.tgz"
-sha256  = "0ba6fa26b32e4b906ab460a7cdb70ebded95ea353fdda93bd7f5792300b9cd43"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "Apache-2.0"
-  uri  = "https://github.com/cloudfoundry/java-buildpack-memory-calculator/blob/main/LICENSE"
-
 [metadata]
 pre-package   = "scripts/build.sh"
 include-files = [
@@ -158,11 +146,8 @@ include-files = [
   "NOTICE",
   "README.md",
   "bin/build",
-  "bin/class-counter",
   "bin/detect",
-  "bin/link-local-dns",
+  "bin/helper",
   "bin/main",
-  "bin/openssl-certificate-loader",
-  "bin/security-providers-configurer",
   "buildpack.toml",
 ]
