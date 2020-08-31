@@ -32,11 +32,13 @@ The buildpack will do the following if a JRE is requested:
 ## Configuration
 | Environment Variable | Description
 | -------------------- | -----------
-| `$BP_JVM_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so, it's best to use a wildcard such as `8.*`.<br/>  If you would like to to pin the exact version used, consider pinning your builder image, e.g. instead of `gcr.io/paketo-buildpacks/builder:base` use `gcr.io/paketo-buildpacks/builder:0.0.389-base`. The latest version can be found via the web interface of GCR, e.g. [here](https://gcr.io/paketo-buildpacks/builder). The corresponding bellsoft-liberica version is listed the builder image's label `io.buildpacks.builder.metadata`, so either pull the image and `docker image inspect` or use [`skopeo inspect`](https://github.com/containers/skopeo). The JDK & JRE versions corresponding to the buildpack versions can be found in [releases](https://github.com/paketo-buildpacks/bellsoft-liberica/releases).
+| `$BP_JVM_VERSION` | Configure a specific JDK or JRE version.  This value must _exactly_ match a version available in the buildpack so it's best to use a wildcard such as `8.*`.  Since the buildpack only ships a single version of each supported line (e.g. `8.*`, `11.*`, `14.*`) updates to the buildpack can change the version of the JDK or JRE.  In order to hold the JDK and JRE versions stable, the buildpack version itself must be stable.<p/>Buildpack releases (and the dependency versions for each release) can be found [here][bpv].  Few users will use this buildpack directly, instead consuming a language buildpack like `paketo-buildpacks/java` who's releases (and the individual buildpack versions and dependency versions for each release) can be found [here](https://github.com/paketo-buildpacks/java/releases).  Finally, some users will will consume builders like `paketobuildpacks/builder:base` who's releases can be found [here](https://hub.docker.com/r/paketobuildpacks/builder/tags?page=1&name=base).  To determine the individual buildpack versions and dependency versions for each builder release use the [`pack inspect-builder <image>`](https://buildpacks.io/docs/reference/pack/pack_inspect-builder/) functionality.
 | `$BPL_JVM_HEAD_ROOM` | Configure the percentage of headroom the memory calculator will allocated.  Defaults to `0`.
 | `$BPL_JVM_LOADED_CLASS_COUNT` | Configure the number of classes that will be loaded at runtime.  Defaults to 35% of the number of classes.
 | `$BPL_JVM_THREAD_COUNT` | Configure the number of user threads at runtime.  Defaults to `250`.
 | `$JAVA_TOOL_OPTIONS` | Configure the JVM launch flags
+
+[bpv]: https://github.com/paketo-buildpacks/bellsoft-liberica/releases
 
 ## Bindings
 The buildpack optionally accepts the following bindings:
