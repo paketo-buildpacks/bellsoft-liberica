@@ -20,17 +20,20 @@ jobs:
 
                 set -euo pipefail
 
-                sudo curl \
+                mkdir -p "${HOME}"/bin
+                echo "::add-path::${HOME}/bin"
+
+                curl \
                 	--location \
                 	--show-error \
                 	--silent \
-                	--output /usr/local/bin/yj \
+                	--output "${HOME}"/bin/yj \
                 	"https://github.com/sclevine/yj/releases/download/v${YJ_VERSION}/yj-linux"
 
-                sudo chmod +x /usr/local/bin/yj
+                chmod +x "${HOME}"/bin/yj
               env:
                 YJ_VERSION: 5.0.0
-            - name: Update buildpack draft release
+            - name: Update draft release with buildpack information
               run: |
                 #!/usr/bin/env bash
 
@@ -38,15 +41,24 @@ jobs:
 
                 PAYLOAD=$(yj -tj < buildpack.toml | jq '{ primary: . }')
 
+                for PACKAGE in $(yj -t < package.toml | jq -r '.dependencies[].image'); do
+                  PAYLOAD=$(jq -n -r \
+                    --argjson PAYLOAD "${PAYLOAD}" \
+                    --argjson BUILDPACK "$(crane export "${PACKAGE}" - \
+                      | tar xOf - --absolute-names --wildcards "/cnb/buildpacks/*/*/buildpack.toml" \
+                      | yj -tj)" \
+                    '$PAYLOAD | .buildpacks += [ $BUILDPACK ]')
+                done
+
                 jq -n -r \
-                  --arg RELEASE_NAME "${RELEASE_NAME}" \
                   --argjson PAYLOAD "${PAYLOAD}" \
+                  --arg RELEASE_NAME "${RELEASE_NAME}" \
                   '"\($PAYLOAD.primary.buildpack.name) \($RELEASE_NAME)"' \
                   > "${HOME}"/name
 
                 jq -n -r \
-                  --arg RELEASE_BODY "${RELEASE_BODY}" \
                   --argjson PAYLOAD "${PAYLOAD}" \
+                  --arg RELEASE_BODY "${RELEASE_BODY}" \
                   '
                 def id(b):
                   "**ID**: `\(b.buildpack.id)`"
@@ -135,10 +147,10 @@ jobs:
                 ] | flatten | join("\n")
                 ' > "${HOME}"/body
 
-
                 gh api \
                   --method PATCH \
                   "/repos/:owner/:repo/releases/${RELEASE_ID}" \
+                  --field "tag_name=${RELEASE_TAG_NAME}" \
                   --field "name=@${HOME}/name" \
                   --field "body=@${HOME}/body"
               env:
@@ -146,3 +158,4 @@ jobs:
                 RELEASE_BODY: ${{ steps.release-drafter.outputs.body }}
                 RELEASE_ID: ${{ steps.release-drafter.outputs.id }}
                 RELEASE_NAME: ${{ steps.release-drafter.outputs.name }}
+                RELEASE_TAG_NAME: ${{ steps.release-drafter.outputs.tag_name }}
