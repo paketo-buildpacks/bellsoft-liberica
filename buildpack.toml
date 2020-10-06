@@ -58,9 +58,9 @@ launch      = true
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "8.0.0"
-uri     = "placeholder"
-sha256  = "placeholder"
+version = "8.0.265"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u265+1/bellsoft-jdk8u265+1-linux-amd64.tar.gz"
+sha256  = "e060f41eb364b69d2a088de573c55e6d1b11eee62037c12ba522375c16a87b57"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
