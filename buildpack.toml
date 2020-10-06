@@ -94,9 +94,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "11.0.0"
-uri     = "placeholder"
-sha256  = "placeholder"
+version = "11.0.8"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.8+10/bellsoft-jre11.0.8+10-linux-amd64.tar.gz"
+sha256  = "b4cb31162ff6d7926dd09e21551fa745fa3ae1758c25148b48dadcf78ab0c24c"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
@@ -106,9 +106,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "14.0.0"
-uri     = "placeholder"
-sha256  = "placeholder"
+version = "14.0.2"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/14.0.2+13/bellsoft-jdk14.0.2+13-linux-amd64.tar.gz"
+sha256  = "25b312cfa20e19f09935e7dd57843bf3bf4e2013c63eea67b32846dfc742f80d"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
@@ -118,9 +118,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "14.0.0"
-uri     = "placeholder"
-sha256  = "placeholder"
+version = "14.0.2"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/14.0.2+13/bellsoft-jre14.0.2+13-linux-amd64.tar.gz"
+sha256  = "efa6d87993ff21615e2d8fc0c98e07ff357fc9f3b9bd93c2cf58ba7f2b6fd2e0"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
