@@ -143,8 +143,8 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 id      = "jre"
 name    = "BellSoft Liberica JRE"
 version = "15.0.0"
-uri     = "placeholder"
-sha256  = "placeholder"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/15+36/bellsoft-jre15+36-linux-amd64.tar.gz"
+sha256  = "39e34aad64563be005dd7495104795d6640febee5ab052fc0f80a6b1943d2d28"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
