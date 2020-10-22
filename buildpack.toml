@@ -106,30 +106,6 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "14.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/14.0.2+13/bellsoft-jdk14.0.2+13-linux-amd64.tar.gz"
-sha256  = "25b312cfa20e19f09935e7dd57843bf3bf4e2013c63eea67b32846dfc742f80d"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jre"
-name    = "BellSoft Liberica JRE"
-version = "14.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/14.0.2+13/bellsoft-jre14.0.2+13-linux-amd64.tar.gz"
-sha256  = "efa6d87993ff21615e2d8fc0c98e07ff357fc9f3b9bd93c2cf58ba7f2b6fd2e0"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "BellSoft Liberica JDK"
 version = "15.0.1"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/15.0.1+9/bellsoft-jdk15.0.1+9-linux-amd64.tar.gz"
 sha256  = "54a38e99dc65b15fb5ee36315f40a938359be69cbf13e00b6f28f5720f5d9fa9"
