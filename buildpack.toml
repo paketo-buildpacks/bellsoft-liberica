@@ -70,9 +70,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "8.0.265"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u265+1/bellsoft-jre8u265+1-linux-amd64.tar.gz"
-sha256  = "a754ed4e922630d18ec382e810460009a176e1cb9d2955b200e2dca972f6702e"
+version = "8.0.272"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u272+10/bellsoft-jre8u272+10-linux-amd64.tar.gz"
+sha256  = "76078eb9a6ff19a273ac50d17ae3595caa724ddfd5801521d8ad8c76a73d3e2f"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
