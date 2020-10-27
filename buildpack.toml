@@ -95,8 +95,8 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 id      = "jre"
 name    = "BellSoft Liberica JRE"
 version = "11.0.9"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.9+11/bellsoft-jre11.0.9+11-linux-amd64.tar.gz"
-sha256  = "5ebebfbb6601c8b2907f16070f749da37926f0cf01d63bab5bd74cbf2874a518"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.9+12/bellsoft-jre11.0.9+12-linux-amd64.tar.gz"
+sha256  = "9821d56ac686ac7a53aab7838cdf7b509b60764f3bba9a36fe09ce2cef027d57"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
