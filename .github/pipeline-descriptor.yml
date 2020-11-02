@@ -1,0 +1,63 @@
+codeowners:
+- path:  "*"
+  owner: "@paketo-buildpacks/java-buildpacks"
+
+package:
+  repository:     gcr.io/paketo-buildpacks/bellsoft-liberica
+  register:       true
+  registry_token: ${{ secrets.JAVA_BUILDPACK_REGISTRY_TOKEN }}
+
+docker_credentials:
+- registry: gcr.io
+  username: _json_key
+  password: ${{ secrets.JAVA_GCLOUD_SERVICE_ACCOUNT_KEY }}
+
+dependencies:
+- name:            JDK 8
+  id:              jdk
+  version_pattern: "8\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jdk
+    version: "8"
+- name:            JRE 8
+  id:              jre
+  version_pattern: "8\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jre
+    version: "8"
+- name:            JDK 11
+  id:              jdk
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jdk
+    version: "11"
+- name:            JRE 11
+  id:              jre
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jre
+    version: "11"
+- name:            JDK 15
+  id:              jdk
+  version_pattern: "15\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jdk
+    version: "15"
+- name:            JRE 15
+  id:              jre
+  version_pattern: "15\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    type:    jre
+    version: "15"
+- id:   jvmkill
+  uses: docker://ghcr.io/paketo-buildpacks/actions/github-release-dependency:main
+  with:
+    owner:      cloudfoundry
+    repository: jvmkill
+    token:      ${{ secrets.GITHUB_TOKEN }}
