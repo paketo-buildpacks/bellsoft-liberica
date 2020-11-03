@@ -1,3 +1,5 @@
+github_token: ${{ secrets.JAVA_GITHUB_TOKEN }}
+
 codeowners:
 - path:  "*"
   owner: "@paketo-buildpacks/java-buildpacks"
@@ -60,4 +62,4 @@ dependencies:
   with:
     owner:      cloudfoundry
     repository: jvmkill
-    token:      ${{ secrets.GITHUB_TOKEN }}
+    token:      ${{ secrets.JAVA_GITHUB_TOKEN }}
