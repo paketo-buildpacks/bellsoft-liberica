@@ -80,6 +80,7 @@ jobs:
                 VERSION_PATTERN: 8\.[\d]+\.[\d]+
             - uses: peter-evans/create-pull-request@v3
               with:
+                author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
                 body: Bumps `JDK 8` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
                 branch: update/buildpack/jdk-8
                 commit-message: |-
