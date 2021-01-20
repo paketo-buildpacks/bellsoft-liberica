@@ -82,9 +82,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "11.0.9"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.9.1+1/bellsoft-jdk11.0.9.1+1-linux-amd64.tar.gz"
-sha256  = "786c48fa6429d6a3f0afb189a65f0a43772e42afbab836852b9a1fdfdb8fc502"
+version = "11.0.10"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.10+9/bellsoft-jdk11.0.10+9-linux-amd64.tar.gz"
+sha256  = "360be34e01db2422ae7b69845f1c86556d1ed1a3733ac931f930fa329f5f03fa"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
