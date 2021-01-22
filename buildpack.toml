@@ -58,9 +58,9 @@ launch      = true
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "8.0.275"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u275+1/bellsoft-jdk8u275+1-linux-amd64.tar.gz"
-sha256  = "e8ec1ba4ba7034749664cf06d3dfdec6856ca7f83bae8526635a710c173a2ee5"
+version = "8.0.282"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u282+8/bellsoft-jdk8u282+8-linux-amd64.tar.gz"
+sha256  = "301e442f2edfc55bce7b194c8ee56d5f8d736f95591755dd62219c9191bbdd68"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
@@ -94,9 +94,9 @@ stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" 
 [[metadata.dependencies]]
 id      = "jre"
 name    = "BellSoft Liberica JRE"
-version = "11.0.9"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.9.1+1/bellsoft-jre11.0.9.1+1-linux-amd64.tar.gz"
-sha256  = "d9ff2d84528a2154ff669b85e6dbdee7f244194dcc64e0a8a1bedc470b3bcf56"
+version = "11.0.10"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.10+9/bellsoft-jre11.0.10+9-linux-amd64.tar.gz"
+sha256  = "2ca618d3122535aa39e713dce18286622a410ab2f003d73b321520f28aad0c36"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
