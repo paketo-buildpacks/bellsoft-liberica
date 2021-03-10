@@ -47,7 +47,7 @@ launch      = true
 [[metadata.configurations]]
 name        = "BP_JVM_VERSION"
 description = "the Java version"
-default     = "11.*"
+default     = "11"
 build       = true
 
 [[metadata.configurations]]
