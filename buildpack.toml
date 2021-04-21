@@ -58,9 +58,9 @@ launch      = true
 [[metadata.dependencies]]
 id      = "jdk"
 name    = "BellSoft Liberica JDK"
-version = "8.0.282"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u282+8/bellsoft-jdk8u282+8-linux-amd64.tar.gz"
-sha256  = "301e442f2edfc55bce7b194c8ee56d5f8d736f95591755dd62219c9191bbdd68"
+version = "8.0.292"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/8u292+10/bellsoft-jdk8u292+10-linux-amd64.tar.gz"
+sha256  = "2750a2895f3971d2e2e24b130c017d9bf82fc1a4d5394e1ff7a4920f58d106ae"
 stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
 
   [[metadata.dependencies.licenses]]
