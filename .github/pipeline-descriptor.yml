@@ -45,20 +45,6 @@ dependencies:
   with:
     type:    jre
     version: "11"
-- name:            JDK 15
-  id:              jdk
-  version_pattern: "15\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  with:
-    type:    jdk
-    version: "15"
-- name:            JRE 15
-  id:              jre
-  version_pattern: "15\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  with:
-    type:    jre
-    version: "15"
 - name:            JDK 16
   id:              jdk
   version_pattern: "16\\.[\\d]+\\.[\\d]+"
