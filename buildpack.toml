@@ -12,13 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-api = "0.5"
+api = "0.6"
 
 [buildpack]
 id       = "paketo-buildpacks/bellsoft-liberica"
 name     = "Paketo BellSoft Liberica Buildpack"
 version  = "{{.version}}"
 homepage = "https://github.com/paketo-buildpacks/bellsoft-liberica"
+description = "A Cloud Native Buildpack that provides the Bellsoft Liberica implementations of JREs and JDKs"
+keywords    = ["java", "jvm", "jre", "jdk"]
+
+[[buildpack.licenses]]
+type = "Apache-2.0"
+uri  = "https://github.com/paketo-buildpacks/bellsoft-liberica/blob/main/LICENSE"
 
 [[stacks]]
 id = "io.buildpacks.stacks.bionic"
