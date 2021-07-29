@@ -30,7 +30,10 @@ uri  = "https://github.com/paketo-buildpacks/bellsoft-liberica/blob/main/LICENSE
 id = "io.buildpacks.stacks.bionic"
 
 [[stacks]]
-id = "org.cloudfoundry.stacks.cflinuxfs3"
+id = "io.paketo.stacks.tiny"
+
+[[stacks]]
+id = "*"
 
 [[metadata.configurations]]
 name        = "BPL_JVM_HEAD_ROOM"
@@ -67,7 +70,7 @@ name    = "BellSoft Liberica JDK"
 version = "8.0.302"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jdk8u302+8-linux-amd64.tar.gz"
 sha256  = "23628d2945e54fc9c013a538d8902cfd371ff12ac57df390869e492002999418"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -79,7 +82,7 @@ name    = "BellSoft Liberica JRE"
 version = "8.0.302"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jre8u302+8-linux-amd64.tar.gz"
 sha256  = "43400304ef7ca9934b9c208df3c07f958b17ad5a9bbf5d59c73809a6cb2cadee"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -91,7 +94,7 @@ name    = "BellSoft Liberica JDK"
 version = "11.0.12"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jdk11.0.12+7-linux-amd64.tar.gz"
 sha256  = "7c38cbdd9f723ea3c4d1d99b5ad12ef84c7c4716898ed58e5b8a201d91c7fd97"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -103,7 +106,7 @@ name    = "BellSoft Liberica JRE"
 version = "11.0.12"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jre11.0.12+7-linux-amd64.tar.gz"
 sha256  = "b8ef03f5c6db0ecf1538865fbb615c28feec61a5814e3408ba4d168dc77451e3"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -115,7 +118,7 @@ name    = "BellSoft Liberica JDK"
 version = "16.0.2"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jdk16.0.2+7-linux-amd64.tar.gz"
 sha256  = "d447fb2c8cf2e4b4fdf136f18b4863d80797cc13954af5d51f792a49eb45694e"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -127,7 +130,7 @@ name    = "BellSoft Liberica JRE"
 version = "16.0.2"
 uri     = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jre16.0.2+7-linux-amd64.tar.gz"
 sha256  = "756c2b27ffdd584a4e18cb72c712e0540852c1db472ece468352c3c1dee2bd20"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -139,7 +142,7 @@ name    = "JVMKill Agent"
 version = "1.16.0"
 uri     = "https://github.com/cloudfoundry/jvmkill/releases/download/v1.16.0.RELEASE/jvmkill-1.16.0-RELEASE.so"
 sha256  = "a3092627b082cb3cdbbe4b255d35687126aa604e6b613dcda33be9f7e1277162"
-stacks  = [ "io.buildpacks.stacks.bionic", "org.cloudfoundry.stacks.cflinuxfs3" ]
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
 
   [[metadata.dependencies.licenses]]
   type = "Apache-2.0"
