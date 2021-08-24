@@ -60,6 +60,12 @@ default     = "11"
 build       = true
 
 [[metadata.configurations]]
+name        = "BP_JVM_TYPE"
+description = "the JVM type - JDK or JRE"
+default     = "JRE"
+build       = true
+
+[[metadata.configurations]]
 name        = "JAVA_TOOL_OPTIONS"
 description = "the JVM launch flags"
 launch      = true
