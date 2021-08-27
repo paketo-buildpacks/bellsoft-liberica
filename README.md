@@ -22,14 +22,15 @@ The buildpack will do the following if a JRE is requested:
 * Contributes a JRE to a layer with all commands on `$PATH`
 * Contributes `$JAVA_HOME` configured to the layer
 * Contributes `-XX:ActiveProcessorCount` to the layer
+* Contributes `-XX:+ExitOnOutOfMemoryError` to the layer
 * Contributes `$MALLOC_ARENA_MAX` to the layer
 * Disables JVM DNS caching if link-local DNS is available
 * If `metadata.build = true`
   * Marks layer as `build` and `cache`
 * If `metadata.launch = true`
   * Marks layer as `launch`
-* Contributes `jvmkill` to a layer marked `launch`
 * Contributes Memory Calculator to a layer marked `launch`
+* Contributes Heap Dump helper to a layer marked `launch`
 
 ## Configuration
 
