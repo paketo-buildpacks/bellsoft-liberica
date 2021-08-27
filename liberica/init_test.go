@@ -14,19 +14,24 @@
  * limitations under the License.
  */
 
-package main
+package liberica_test
 
 import (
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
-	"os"
+	"testing"
 
-	"github.com/paketo-buildpacks/libpak"
-	"github.com/paketo-buildpacks/libpak/bard"
+	"github.com/sclevine/spec"
+	"github.com/sclevine/spec/report"
 )
 
-func main() {
-	libpak.Main(
-		liberica.Detect{},
-		liberica.Build{Logger: bard.NewLogger(os.Stdout)},
-	)
+var (
+	BuildContribution  = map[string]interface{}{"build": true}
+	LaunchContribution = map[string]interface{}{"launch": true}
+	NoContribution     = map[string]interface{}{}
+)
+
+func TestUnit(t *testing.T) {
+	suite := spec.New("liberica", spec.Report(report.Terminal{}))
+	suite("Build", testBuild)
+	suite("Detect", testDetect)
+	suite.Run(t)
 }
