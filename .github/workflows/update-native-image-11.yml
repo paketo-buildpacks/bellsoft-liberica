@@ -1,4 +1,4 @@
-name: Update JDK 8
+name: Update Native Image 11
 "on":
     schedule:
         - cron: 0 5 * * 1-5
@@ -44,9 +44,9 @@ jobs:
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
               with:
-                product: liberica
-                type: jdk
-                version: "8"
+                product: nik
+                type: core
+                version: "11"
             - id: buildpack
               name: Update Buildpack Dependency
               run: |
@@ -74,22 +74,22 @@ jobs:
                 echo "::set-output name=old-version::${OLD_VERSION}"
                 echo "::set-output name=new-version::${VERSION}"
               env:
-                ID: jdk
+                ID: native-image-svm
                 SHA256: ${{ steps.dependency.outputs.sha256 }}
                 URI: ${{ steps.dependency.outputs.uri }}
                 VERSION: ${{ steps.dependency.outputs.version }}
-                VERSION_PATTERN: 8\.[\d]+\.[\d]+
+                VERSION_PATTERN: 11\.[\d]+\.[\d]+
             - uses: peter-evans/create-pull-request@v3
               with:
                 author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
-                body: Bumps `JDK 8` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
-                branch: update/buildpack/jdk-8
+                body: Bumps `Native Image 11` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
+                branch: update/buildpack/native-image-11
                 commit-message: |-
-                    Bump JDK 8 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                    Bump Native Image 11 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
 
-                    Bumps JDK 8 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
+                    Bumps Native Image 11 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
                 delete-branch: true
                 labels: semver:minor, type:dependency-upgrade
                 signoff: true
-                title: Bump JDK 8 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                title: Bump Native Image 11 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
                 token: ${{ secrets.JAVA_GITHUB_TOKEN }}

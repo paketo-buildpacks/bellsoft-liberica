@@ -44,6 +44,7 @@ jobs:
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
               with:
+                product: liberica
                 type: jdk
                 version: "16"
             - id: buildpack
