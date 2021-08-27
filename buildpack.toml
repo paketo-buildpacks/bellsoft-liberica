@@ -54,6 +54,12 @@ default     = "250"
 launch      = true
 
 [[metadata.configurations]]
+name        = "BPL_HEAP_DUMP_PATH"
+description = "write heap dumps on error to this path"
+default     = ""
+launch      = true
+
+[[metadata.configurations]]
 name        = "BP_JVM_VERSION"
 description = "the Java version"
 default     = "11"
