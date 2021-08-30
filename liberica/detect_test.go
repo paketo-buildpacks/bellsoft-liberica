@@ -17,8 +17,9 @@
 package liberica_test
 
 import (
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
 	"testing"
+
+	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
 
 	"github.com/buildpacks/libcnb"
 	. "github.com/onsi/gomega"
@@ -40,17 +41,11 @@ func testDetect(t *testing.T, context spec.G, it spec.S) {
 				{
 					Provides: []libcnb.BuildPlanProvide{
 						{Name: "jdk"},
+						{Name: "native-image-builder"},
 						{Name: "jre"},
 					},
-				},
-				{
-					Provides: []libcnb.BuildPlanProvide{
+					Requires: []libcnb.BuildPlanRequire{
 						{Name: "jdk"},
-					},
-				},
-				{
-					Provides: []libcnb.BuildPlanProvide{
-						{Name: "jre"},
 					},
 				},
 				{
@@ -65,11 +60,17 @@ func testDetect(t *testing.T, context spec.G, it spec.S) {
 				{
 					Provides: []libcnb.BuildPlanProvide{
 						{Name: "jdk"},
-						{Name: "native-image-builder"},
 						{Name: "jre"},
 					},
-					Requires: []libcnb.BuildPlanRequire{
+				},
+				{
+					Provides: []libcnb.BuildPlanProvide{
 						{Name: "jdk"},
+					},
+				},
+				{
+					Provides: []libcnb.BuildPlanProvide{
+						{Name: "jre"},
 					},
 				},
 			},
