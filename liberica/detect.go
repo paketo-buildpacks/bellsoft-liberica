@@ -29,17 +29,11 @@ func (d Detect) Detect(context libcnb.DetectContext) (libcnb.DetectResult, error
 			{
 				Provides: []libcnb.BuildPlanProvide{
 					{Name: "jdk"},
+					{Name: "native-image-builder"},
 					{Name: "jre"},
 				},
-			},
-			{
-				Provides: []libcnb.BuildPlanProvide{
+				Requires: []libcnb.BuildPlanRequire{
 					{Name: "jdk"},
-				},
-			},
-			{
-				Provides: []libcnb.BuildPlanProvide{
-					{Name: "jre"},
 				},
 			},
 			{
@@ -54,11 +48,17 @@ func (d Detect) Detect(context libcnb.DetectContext) (libcnb.DetectResult, error
 			{
 				Provides: []libcnb.BuildPlanProvide{
 					{Name: "jdk"},
-					{Name: "native-image-builder"},
 					{Name: "jre"},
 				},
-				Requires: []libcnb.BuildPlanRequire{
+			},
+			{
+				Provides: []libcnb.BuildPlanProvide{
 					{Name: "jdk"},
+				},
+			},
+			{
+				Provides: []libcnb.BuildPlanProvide{
+					{Name: "jre"},
 				},
 			},
 		},
