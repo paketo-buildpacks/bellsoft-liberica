@@ -18,8 +18,9 @@ package liberica
 
 import (
 	"fmt"
-	"github.com/paketo-buildpacks/libjvm"
 	"strings"
+
+	"github.com/paketo-buildpacks/libjvm"
 
 	"github.com/buildpacks/libcnb"
 	"github.com/heroku/color"
@@ -122,7 +123,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 		result.BOM.Entries = append(result.BOM.Entries, be)
 	}
 
-	if jreRequired {
+	if jreRequired && !nativeImage {
 		dt := libjvm.JREType
 		depJRE, err := dr.Resolve("jre", v)
 
