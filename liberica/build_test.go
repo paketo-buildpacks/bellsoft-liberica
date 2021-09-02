@@ -17,9 +17,10 @@
 package liberica_test
 
 import (
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
 	"os"
 	"testing"
+
+	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
 
 	"github.com/buildpacks/libcnb"
 	. "github.com/onsi/gomega"
@@ -70,11 +71,6 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 					"version": "1.1.1",
 					"stacks":  []interface{}{"test-stack-id"},
 				},
-				{
-					"id":      "jvmkill",
-					"version": "1.1.1",
-					"stacks":  []interface{}{"test-stack-id"},
-				},
 			},
 		}
 		ctx.StackID = "test-stack-id"
@@ -101,11 +97,6 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			"dependencies": []map[string]interface{}{
 				{
 					"id":      "native-image-svm",
-					"version": "1.1.1",
-					"stacks":  []interface{}{"test-stack-id"},
-				},
-				{
-					"id":      "jvmkill",
 					"version": "1.1.1",
 					"stacks":  []interface{}{"test-stack-id"},
 				},
