@@ -38,7 +38,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	)
 
 	it("contributes JDK", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jdk"})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jdk"})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -63,7 +65,11 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes NIK", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "native-image-builder"})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{}},
+			libcnb.BuildpackPlanEntry{Name: "native-image-builder"},
+		)
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -87,12 +93,13 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[0].Build).To(BeTrue())
 	})
 
-	it("contributes NIK if both native-image-builder and jdk are present", func() {
+	it("contributes NIK alternative buildplan", func() {
 		// NIK includes a JDK, so we don't need a second JDK
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "native-image-builder"},
-			libcnb.BuildpackPlanEntry{Name: "jdk"})
+			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{}},
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{}})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -117,7 +124,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes JRE", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -145,7 +154,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes security-providers-classpath-8 before Java 9", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -173,7 +184,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes security-providers-classpath-9 after Java 9", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -201,7 +214,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes JDK when no JRE and only a JRE is wanted", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -228,8 +243,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 	})
 
 	it("contributes JDK when no JRE and both a JDK and JRE are wanted", func() {
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution})
-		ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution},
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -312,8 +329,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		it("contributes JDK when specified explicitly in $BP_JVM_TYPE", func() {
 			Expect(os.Setenv("BP_JVM_TYPE", "jdk")).To(Succeed())
 
-			ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution})
-			ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+			ctx.Plan.Entries = append(
+				ctx.Plan.Entries,
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 			ctx.Buildpack.Metadata = map[string]interface{}{
 				"dependencies": []map[string]interface{}{
 					{
@@ -342,8 +361,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		it("contributes JRE when specified explicitly in $BP_JVM_TYPE", func() {
 			Expect(os.Setenv("BP_JVM_TYPE", "jre")).To(Succeed())
 
-			ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution})
-			ctx.Plan.Entries = append(ctx.Plan.Entries, libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+			ctx.Plan.Entries = append(
+				ctx.Plan.Entries,
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
 			ctx.Buildpack.Metadata = map[string]interface{}{
 				"dependencies": []map[string]interface{}{
 					{
