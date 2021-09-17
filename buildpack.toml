@@ -60,6 +60,49 @@ default     = ""
 launch      = true
 
 [[metadata.configurations]]
+name        = "BPL_JAVA_NMT_ENABLED"
+description = "enables Java Native Memory Tracking (NMT)"
+default     = "true"
+launch      = true
+
+
+[[metadata.configurations]]
+name        = "BPL_JAVA_NMT_LEVEL"
+description = "configure level of NMT, summary or detail"
+default     = "summary"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JMX_ENABLED"
+description = "enables Java Management Extensions (JMX)"
+default     = "false"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_JMX_PORT"
+description = "configure the JMX port"
+default     = "5000"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_DEBUG_ENABLED"
+description = "enables Java remote debugging support"
+default     = "false"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_DEBUG_PORT"
+description = "configure the remote debugging port"
+default     = "8000"
+launch      = true
+
+[[metadata.configurations]]
+name        = "BPL_DEBUG_SUSPEND"
+description = "configure whether to suspend execution until a debugger has attached"
+default     = "false"
+launch      = true
+
+[[metadata.configurations]]
 name        = "BP_JVM_VERSION"
 description = "the Java version"
 default     = "11"
