@@ -203,6 +203,30 @@ stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
   type = "GPL-2.0 WITH Classpath-exception-2.0"
   uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
 
+[[metadata.dependencies]]
+id      = "jdk"
+name    = "BellSoft Liberica JDK"
+version = "17.0.0"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jdk17+35-linux-amd64.tar.gz"
+sha256  = "90d7306195091c280da3c00bf1da62163aa99c9d5a2f40ea76925534be3538c0"
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[metadata.dependencies]]
+id      = "jre"
+name    = "BellSoft Liberica JRE"
+version = "17.0.0"
+uri     = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jre17+35-linux-amd64.tar.gz"
+sha256  = "9e04fa20740e697752853da0f229c8ce7fbd5443db863bc93bb2c0fcc3fc4a62"
+stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
+
+  [[metadata.dependencies.licenses]]
+  type = "GPL-2.0 WITH Classpath-exception-2.0"
+  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+
 [metadata]
 pre-package   = "scripts/build.sh"
 include-files = [
