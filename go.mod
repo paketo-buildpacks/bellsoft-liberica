@@ -3,8 +3,7 @@ module github.com/paketo-buildpacks/bellsoft-liberica
 go 1.15
 
 require (
-	github.com/BurntSushi/toml v0.4.1 // indirect
-	github.com/buildpacks/libcnb v1.22.0
+	github.com/buildpacks/libcnb v1.23.0
 	github.com/heroku/color v0.0.6
 	github.com/mattn/go-colorable v0.1.9 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
