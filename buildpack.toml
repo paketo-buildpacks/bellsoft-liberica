@@ -15,227 +15,217 @@
 api = "0.6"
 
 [buildpack]
-id       = "paketo-buildpacks/bellsoft-liberica"
-name     = "Paketo BellSoft Liberica Buildpack"
-version  = "{{.version}}"
-homepage = "https://github.com/paketo-buildpacks/bellsoft-liberica"
-description = "A Cloud Native Buildpack that provides the Bellsoft Liberica implementations of JREs and JDKs"
-keywords    = ["java", "jvm", "jre", "jdk"]
+  description = "A Cloud Native Buildpack that provides the Bellsoft Liberica implementations of JREs and JDKs"
+  homepage = "https://github.com/paketo-buildpacks/bellsoft-liberica"
+  id = "paketo-buildpacks/bellsoft-liberica"
+  keywords = ["java", "jvm", "jre", "jdk"]
+  name = "Paketo BellSoft Liberica Buildpack"
+  version = "{{.version}}"
 
-[[buildpack.licenses]]
-type = "Apache-2.0"
-uri  = "https://github.com/paketo-buildpacks/bellsoft-liberica/blob/main/LICENSE"
-
-[[stacks]]
-id = "io.paketo.stacks.tiny"
-
-[[stacks]]
-id = "io.buildpacks.stacks.bionic"
-
-[[stacks]]
-id = "*"
-
-[[metadata.configurations]]
-name        = "BPL_JVM_HEAD_ROOM"
-description = "the headroom in memory calculation"
-default     = "0"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JVM_LOADED_CLASS_COUNT"
-description = "the number of loaded classes in memory calculation"
-default     = "35% of classes"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JVM_THREAD_COUNT"
-description = "the number of threads in memory calculation"
-default     = "250"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_HEAP_DUMP_PATH"
-description = "write heap dumps on error to this path"
-default     = ""
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_ENABLED"
-description = "enables Java Native Memory Tracking (NMT)"
-default     = "true"
-launch      = true
-
-
-[[metadata.configurations]]
-name        = "BPL_JAVA_NMT_LEVEL"
-description = "configure level of NMT, summary or detail"
-default     = "summary"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JMX_ENABLED"
-description = "enables Java Management Extensions (JMX)"
-default     = "false"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_JMX_PORT"
-description = "configure the JMX port"
-default     = "5000"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_DEBUG_ENABLED"
-description = "enables Java remote debugging support"
-default     = "false"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_DEBUG_PORT"
-description = "configure the remote debugging port"
-default     = "8000"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BPL_DEBUG_SUSPEND"
-description = "configure whether to suspend execution until a debugger has attached"
-default     = "false"
-launch      = true
-
-[[metadata.configurations]]
-name        = "BP_JVM_VERSION"
-description = "the Java version"
-default     = "11"
-build       = true
-
-[[metadata.configurations]]
-name        = "BP_JVM_TYPE"
-description = "the JVM type - JDK or JRE"
-default     = "JRE"
-build       = true
-
-[[metadata.configurations]]
-name        = "JAVA_TOOL_OPTIONS"
-description = "the JVM launch flags"
-launch      = true
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "BellSoft Liberica JDK"
-version = "8.0.302"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jdk8u302+8-linux-amd64.tar.gz"
-sha256  = "23628d2945e54fc9c013a538d8902cfd371ff12ac57df390869e492002999418"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jre"
-name    = "BellSoft Liberica JRE"
-version = "8.0.302"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jre8u302+8-linux-amd64.tar.gz"
-sha256  = "43400304ef7ca9934b9c208df3c07f958b17ad5a9bbf5d59c73809a6cb2cadee"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "BellSoft Liberica JDK"
-version = "11.0.12"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jdk11.0.12+7-linux-amd64.tar.gz"
-sha256  = "7c38cbdd9f723ea3c4d1d99b5ad12ef84c7c4716898ed58e5b8a201d91c7fd97"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jre"
-name    = "BellSoft Liberica JRE"
-version = "11.0.12"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jre11.0.12+7-linux-amd64.tar.gz"
-sha256  = "b8ef03f5c6db0ecf1538865fbb615c28feec61a5814e3408ba4d168dc77451e3"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "native-image-svm"
-name    = "BellSoft Liberica NIK"
-version = "11.0.12"
-uri     = "https://download.bell-sw.com/vm/21.2.0/bellsoft-liberica-vm-core-openjdk11-21.2.0-linux-amd64.tar.gz"
-sha256  = "09b6bc126bbcfcdb43566c54df2b670fbfe352c8f5fd6e88c84a9f053ab3c90f"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "BellSoft Liberica JDK"
-version = "16.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jdk16.0.2+7-linux-amd64.tar.gz"
-sha256  = "d447fb2c8cf2e4b4fdf136f18b4863d80797cc13954af5d51f792a49eb45694e"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jre"
-name    = "BellSoft Liberica JRE"
-version = "16.0.2"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jre16.0.2+7-linux-amd64.tar.gz"
-sha256  = "756c2b27ffdd584a4e18cb72c712e0540852c1db472ece468352c3c1dee2bd20"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jdk"
-name    = "BellSoft Liberica JDK"
-version = "17.0.0"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jdk17+35-linux-amd64.tar.gz"
-sha256  = "90d7306195091c280da3c00bf1da62163aa99c9d5a2f40ea76925534be3538c0"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-[[metadata.dependencies]]
-id      = "jre"
-name    = "BellSoft Liberica JRE"
-version = "17.0.0"
-uri     = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jre17+35-linux-amd64.tar.gz"
-sha256  = "9e04fa20740e697752853da0f229c8ce7fbd5443db863bc93bb2c0fcc3fc4a62"
-stacks  = [ "io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*" ]
-
-  [[metadata.dependencies.licenses]]
-  type = "GPL-2.0 WITH Classpath-exception-2.0"
-  uri  = "https://openjdk.java.net/legal/gplv2+ce.html"
+  [[buildpack.licenses]]
+    type = "Apache-2.0"
+    uri = "https://github.com/paketo-buildpacks/bellsoft-liberica/blob/main/LICENSE"
 
 [metadata]
-pre-package   = "scripts/build.sh"
-include-files = [
-  "LICENSE",
-  "NOTICE",
-  "README.md",
-  "bin/build",
-  "bin/detect",
-  "bin/helper",
-  "bin/main",
-  "buildpack.toml",
-]
+  include-files = ["LICENSE", "NOTICE", "README.md", "bin/build", "bin/detect", "bin/helper", "bin/main", "buildpack.toml"]
+  pre-package = "scripts/build.sh"
+
+  [[metadata.configurations]]
+    default = "0"
+    description = "the headroom in memory calculation"
+    launch = true
+    name = "BPL_JVM_HEAD_ROOM"
+
+  [[metadata.configurations]]
+    default = "35% of classes"
+    description = "the number of loaded classes in memory calculation"
+    launch = true
+    name = "BPL_JVM_LOADED_CLASS_COUNT"
+
+  [[metadata.configurations]]
+    default = "250"
+    description = "the number of threads in memory calculation"
+    launch = true
+    name = "BPL_JVM_THREAD_COUNT"
+
+  [[metadata.configurations]]
+    default = ""
+    description = "write heap dumps on error to this path"
+    launch = true
+    name = "BPL_HEAP_DUMP_PATH"
+
+  [[metadata.configurations]]
+    default = "true"
+    description = "enables Java Native Memory Tracking (NMT)"
+    launch = true
+    name = "BPL_JAVA_NMT_ENABLED"
+
+  [[metadata.configurations]]
+    default = "summary"
+    description = "configure level of NMT, summary or detail"
+    launch = true
+    name = "BPL_JAVA_NMT_LEVEL"
+
+  [[metadata.configurations]]
+    default = "false"
+    description = "enables Java Management Extensions (JMX)"
+    launch = true
+    name = "BPL_JMX_ENABLED"
+
+  [[metadata.configurations]]
+    default = "5000"
+    description = "configure the JMX port"
+    launch = true
+    name = "BPL_JMX_PORT"
+
+  [[metadata.configurations]]
+    default = "false"
+    description = "enables Java remote debugging support"
+    launch = true
+    name = "BPL_DEBUG_ENABLED"
+
+  [[metadata.configurations]]
+    default = "8000"
+    description = "configure the remote debugging port"
+    launch = true
+    name = "BPL_DEBUG_PORT"
+
+  [[metadata.configurations]]
+    default = "false"
+    description = "configure whether to suspend execution until a debugger has attached"
+    launch = true
+    name = "BPL_DEBUG_SUSPEND"
+
+  [[metadata.configurations]]
+    build = true
+    default = "11"
+    description = "the Java version"
+    name = "BP_JVM_VERSION"
+
+  [[metadata.configurations]]
+    build = true
+    default = "JRE"
+    description = "the JVM type - JDK or JRE"
+    name = "BP_JVM_TYPE"
+
+  [[metadata.configurations]]
+    description = "the JVM launch flags"
+    launch = true
+    name = "JAVA_TOOL_OPTIONS"
+
+  [[metadata.dependencies]]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    sha256 = "23628d2945e54fc9c013a538d8902cfd371ff12ac57df390869e492002999418"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jdk8u302+8-linux-amd64.tar.gz"
+    version = "8.0.302"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    sha256 = "43400304ef7ca9934b9c208df3c07f958b17ad5a9bbf5d59c73809a6cb2cadee"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jre8u302+8-linux-amd64.tar.gz"
+    version = "8.0.302"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    sha256 = "7c38cbdd9f723ea3c4d1d99b5ad12ef84c7c4716898ed58e5b8a201d91c7fd97"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jdk11.0.12+7-linux-amd64.tar.gz"
+    version = "11.0.12"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    sha256 = "b8ef03f5c6db0ecf1538865fbb615c28feec61a5814e3408ba4d168dc77451e3"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.12+7/bellsoft-jre11.0.12+7-linux-amd64.tar.gz"
+    version = "11.0.12"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "native-image-svm"
+    name = "BellSoft Liberica NIK"
+    sha256 = "09b6bc126bbcfcdb43566c54df2b670fbfe352c8f5fd6e88c84a9f053ab3c90f"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://download.bell-sw.com/vm/21.2.0/bellsoft-liberica-vm-core-openjdk11-21.2.0-linux-amd64.tar.gz"
+    version = "11.0.12"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    sha256 = "d447fb2c8cf2e4b4fdf136f18b4863d80797cc13954af5d51f792a49eb45694e"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jdk16.0.2+7-linux-amd64.tar.gz"
+    version = "16.0.2"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    sha256 = "756c2b27ffdd584a4e18cb72c712e0540852c1db472ece468352c3c1dee2bd20"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/16.0.2+7/bellsoft-jre16.0.2+7-linux-amd64.tar.gz"
+    version = "16.0.2"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    sha256 = "90d7306195091c280da3c00bf1da62163aa99c9d5a2f40ea76925534be3538c0"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jdk17+35-linux-amd64.tar.gz"
+    version = "17.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    sha256 = "9e04fa20740e697752853da0f229c8ce7fbd5443db863bc93bb2c0fcc3fc4a62"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/17+35/bellsoft-jre17+35-linux-amd64.tar.gz"
+    version = "17.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+[[stacks]]
+  id = "io.paketo.stacks.tiny"
+
+[[stacks]]
+  id = "io.buildpacks.stacks.bionic"
+
+[[stacks]]
+  id = "*"
