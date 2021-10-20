@@ -128,10 +128,10 @@ api = "0.6"
   [[metadata.dependencies]]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    sha256 = "43400304ef7ca9934b9c208df3c07f958b17ad5a9bbf5d59c73809a6cb2cadee"
+    sha256 = "9850e06b83c891bd96b1b3757e1d04a287800cb4c1e7dc5e3044e1967ce64ef6"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jre8u302+8-linux-amd64.tar.gz"
-    version = "8.0.302"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u312+7/bellsoft-jre8u312+7-linux-amd64.tar.gz"
+    version = "8.0.312"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
