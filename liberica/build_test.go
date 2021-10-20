@@ -168,7 +168,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		}
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers[1].(libpak.HelperLayerContributor).Names).To(Equal([]string{
@@ -180,6 +180,8 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			"openssl-certificate-loader",
 			"security-providers-configurer",
 			"jmx",
+			"jfr",
+			"nmt",
 			"security-providers-classpath-8",
 			"debug-8",
 		}))
@@ -200,7 +202,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		}
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers[1].(libpak.HelperLayerContributor).Names).To(Equal([]string{
@@ -212,9 +214,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			"openssl-certificate-loader",
 			"security-providers-configurer",
 			"jmx",
+			"jfr",
+			"nmt",
 			"security-providers-classpath-9",
 			"debug-9",
-			"nmt",
 		}))
 	})
 
