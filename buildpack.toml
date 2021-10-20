@@ -97,6 +97,18 @@ api = "0.6"
     name = "BPL_DEBUG_SUSPEND"
 
   [[metadata.configurations]]
+    default = "false"
+    description = "enables Java Flight Recording (JFR)"
+    launch = true
+    name = "BPL_JFR_ENABLED"
+
+  [[metadata.configurations]]
+    default = ""
+    description = "configure custom Java Flight Recording (JFR) arguments"
+    launch = true
+    name = "BPL_JFR_ARGS"
+
+  [[metadata.configurations]]
     build = true
     default = "11"
     description = "the Java version"
