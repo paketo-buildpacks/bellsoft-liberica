@@ -116,10 +116,10 @@ api = "0.6"
   [[metadata.dependencies]]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    sha256 = "23628d2945e54fc9c013a538d8902cfd371ff12ac57df390869e492002999418"
+    sha256 = "8fdcc27ff96a6653912955d529bdda735c93450a3525ce019e549116f5a17919"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u302+8/bellsoft-jdk8u302+8-linux-amd64.tar.gz"
-    version = "8.0.302"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u312+7/bellsoft-jdk8u312+7-linux-amd64.tar.gz"
+    version = "8.0.312"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
