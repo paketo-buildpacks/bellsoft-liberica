@@ -65,22 +65,6 @@ dependencies:
     product: nik
     type:    core
     version: "17"
-- name:            JDK 16
-  id:              jdk
-  version_pattern: "16\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  with:
-    product: liberica
-    type:    jdk
-    version: "16"
-- name:            JRE 16
-  id:              jre
-  version_pattern: "16\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  with:
-    product: liberica
-    type:    jre
-    version: "16"
 - name:            JDK 17
   id:              jdk
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
