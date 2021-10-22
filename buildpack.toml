@@ -233,6 +233,19 @@ api = "0.6"
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
+
+  [[metadata.dependencies]]
+    id = "native-image-svm"
+    name = "BellSoft Liberica NIK"
+    sha256 = "59f105feaedd511101cca9c63f72696f8af4d4f4b4f0c0e97978b65be7a6943a"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://download.bell-sw.com/vm/21.3.0/bellsoft-liberica-vm-core-openjdk17-21.3.0-linux-amd64.tar.gz"
+    version = "17.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
 [[stacks]]
   id = "io.paketo.stacks.tiny"
 
