@@ -176,22 +176,10 @@ api = "0.6"
   [[metadata.dependencies]]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
-    sha256 = "09b6bc126bbcfcdb43566c54df2b670fbfe352c8f5fd6e88c84a9f053ab3c90f"
+    sha256 = "33aff779c9aa256195d155ff276dd28d0c734a5fb1edd78ffc368a7f7be2dcd1"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/21.2.0/bellsoft-liberica-vm-core-openjdk11-21.2.0-linux-amd64.tar.gz"
-    version = "11.0.12"
-
-    [[metadata.dependencies.licenses]]
-      type = "GPL-2.0 WITH Classpath-exception-2.0"
-      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
-
-  [[metadata.dependencies]]
-    id = "native-image-svm"
-    name = "BellSoft Liberica NIK"
-    sha256 = "59f105feaedd511101cca9c63f72696f8af4d4f4b4f0c0e97978b65be7a6943a"
-    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/21.3.0/bellsoft-liberica-vm-core-openjdk17-21.3.0-linux-amd64.tar.gz"
-    version = "17.0.1"
+    uri = "https://download.bell-sw.com/vm/21.3.0/bellsoft-liberica-vm-core-openjdk11-21.3.0-linux-amd64.tar.gz"
+    version = "11.0.13"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -239,6 +227,18 @@ api = "0.6"
     sha256 = "9b937fe5dfe37547cef0b5952f38ef098d8cb6307763e4c4036eff315614bb93"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.1+12/bellsoft-jre17.0.1+12-linux-amd64.tar.gz"
+    version = "17.0.1"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    id = "native-image-svm"
+    name = "BellSoft Liberica NIK"
+    sha256 = "59f105feaedd511101cca9c63f72696f8af4d4f4b4f0c0e97978b65be7a6943a"
+    stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
+    uri = "https://download.bell-sw.com/vm/21.3.0/bellsoft-liberica-vm-core-openjdk17-21.3.0-linux-amd64.tar.gz"
     version = "17.0.1"
 
     [[metadata.dependencies.licenses]]
