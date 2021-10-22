@@ -57,6 +57,14 @@ dependencies:
     product: nik
     type:    core
     version: "11"
+- name:            Native Image 17
+  id:              native-image-svm
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: nik
+    type:    core
+    version: "17"
 - name:            JDK 16
   id:              jdk
   version_pattern: "16\\.[\\d]+\\.[\\d]+"
