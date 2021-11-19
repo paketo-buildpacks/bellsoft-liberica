@@ -127,6 +127,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Buildpack.API = "0.6"
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -225,6 +226,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Buildpack.API = "0.6"
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -255,6 +257,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution},
 			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Buildpack.API = "0.6"
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
