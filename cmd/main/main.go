@@ -17,16 +17,24 @@
 package main
 
 import (
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
 	"os"
+
+	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
+	"github.com/paketo-buildpacks/libjvm/helper"
 
 	"github.com/paketo-buildpacks/libpak"
 	"github.com/paketo-buildpacks/libpak/bard"
 )
 
 func main() {
+	logger := bard.NewLogger(os.Stdout)
+
+	// not used directly, but this forces the helper module to be included in the module
+	// we need the helper module because of the way that `scripts/build/sh` builds the helper cmd
+	_ = helper.ActiveProcessorCount{Logger: logger}
+
 	libpak.Main(
 		liberica.Detect{},
-		liberica.Build{Logger: bard.NewLogger(os.Stdout)},
+		liberica.Build{Logger: logger},
 	)
 }
