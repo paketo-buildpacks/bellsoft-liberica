@@ -37,7 +37,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		ctx libcnb.BuildContext
 	)
 
-	it("contributes JDK", func() {
+	it("contributes JDK API <= 0.6", func() {
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jdk"})
@@ -50,9 +50,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 				},
 			},
 		}
+		ctx.Buildpack.API = "0.6"
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers).To(HaveLen(1))
@@ -64,7 +65,34 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[0].Build).To(BeTrue())
 	})
 
-	it("contributes NIK", func() {
+	it("contributes JDK API >= 0.7", func() {
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jdk"})
+		ctx.Buildpack.Metadata = map[string]interface{}{
+			"dependencies": []map[string]interface{}{
+				{
+					"id":      "jdk",
+					"version": "1.1.1",
+					"stacks":  []interface{}{"test-stack-id"},
+					"cpes":    []interface{}{"cpe:2.3:a:bellsoft:jdk:1.1.1:*:*:*:*:*:*:*"},
+					"purl":    "pkg:generic/bellsoft-jdk@1.1.1?arch=amd64",
+				},
+			},
+		}
+		ctx.Buildpack.API = "0.7"
+		ctx.StackID = "test-stack-id"
+
+		result, err := liberica.Build{}.Build(ctx)
+		Expect(err).NotTo(HaveOccurred())
+
+		Expect(result.Layers).To(HaveLen(1))
+		Expect(result.Layers[0].Name()).To(Equal("jdk"))
+
+		Expect(result.BOM.Entries).To(HaveLen(0))
+	})
+
+	it("contributes NIK API <= 0.6", func() {
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{}},
@@ -79,6 +107,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 				},
 			},
 		}
+		ctx.Buildpack.API = "0.6"
 		ctx.StackID = "test-stack-id"
 
 		result, err := liberica.Build{}.Build(ctx)
@@ -91,6 +120,35 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[0].Name).To(Equal("native-image-svm"))
 		Expect(result.BOM.Entries[0].Launch).To(BeFalse())
 		Expect(result.BOM.Entries[0].Build).To(BeTrue())
+	})
+
+	it("contributes NIK API >= 0.7", func() {
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{}},
+			libcnb.BuildpackPlanEntry{Name: "native-image-builder"},
+		)
+		ctx.Buildpack.Metadata = map[string]interface{}{
+			"dependencies": []map[string]interface{}{
+				{
+					"id":      "native-image-svm",
+					"version": "1.1.1",
+					"stacks":  []interface{}{"test-stack-id"},
+					"cpes":    []interface{}{"cpe:2.3:a:bellsoft:nik:1.1.1:*:*:*:*:*:*:*"},
+					"purl":    "pkg:generic/bellsoft-nik@1.1.1?arch=amd64",
+				},
+			},
+		}
+		ctx.Buildpack.API = "0.7"
+		ctx.StackID = "test-stack-id"
+
+		result, err := liberica.Build{}.Build(ctx)
+		Expect(err).NotTo(HaveOccurred())
+
+		Expect(result.Layers).To(HaveLen(1))
+		Expect(result.Layers[0].Name()).To(Equal("native-image-svm"))
+
+		Expect(result.BOM.Entries).To(HaveLen(0))
 	})
 
 	it("contributes NIK alternative buildplan", func() {
@@ -109,6 +167,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 				},
 			},
 		}
+		ctx.Buildpack.API = "0.6"
 		ctx.StackID = "test-stack-id"
 
 		result, err := liberica.Build{}.Build(ctx)
@@ -123,7 +182,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[0].Build).To(BeTrue())
 	})
 
-	it("contributes JRE", func() {
+	it("contributes JRE API <= 0.6", func() {
 		ctx.Plan.Entries = append(
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
@@ -139,7 +198,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		}
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers).To(HaveLen(3))
@@ -152,6 +211,35 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[0].Launch).To(BeTrue())
 		Expect(result.BOM.Entries[1].Name).To(Equal("helper"))
 		Expect(result.BOM.Entries[1].Launch).To(BeTrue())
+	})
+
+	it("contributes JRE API >= 0.7", func() {
+		ctx.Plan.Entries = append(
+			ctx.Plan.Entries,
+			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+		ctx.Buildpack.API = "0.7"
+		ctx.Buildpack.Metadata = map[string]interface{}{
+			"dependencies": []map[string]interface{}{
+				{
+					"id":      "jre",
+					"version": "1.1.1",
+					"stacks":  []interface{}{"test-stack-id"},
+					"cpes":    []interface{}{"cpe:2.3:a:bellsoft:jre:1.1.1:*:*:*:*:*:*:*"},
+					"purl":    "pkg:generic/bellsoft-jre@1.1.1?arch=amd64",
+				},
+			},
+		}
+		ctx.StackID = "test-stack-id"
+
+		result, err := liberica.Build{}.Build(ctx)
+		Expect(err).NotTo(HaveOccurred())
+
+		Expect(result.Layers).To(HaveLen(3))
+		Expect(result.Layers[0].Name()).To(Equal("jre"))
+		Expect(result.Layers[1].Name()).To(Equal("helper"))
+		Expect(result.Layers[2].Name()).To(Equal("java-security-properties"))
+
+		Expect(result.BOM.Entries).To(HaveLen(0))
 	})
 
 	it("contributes security-providers-classpath-8 before Java 9", func() {
@@ -236,9 +324,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 				},
 			},
 		}
+		ctx.Buildpack.API = "0.6"
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers[0].Name()).To(Equal("jdk"))
@@ -257,7 +346,6 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			ctx.Plan.Entries,
 			libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: LaunchContribution},
 			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
-		ctx.Buildpack.API = "0.6"
 		ctx.Buildpack.Metadata = map[string]interface{}{
 			"dependencies": []map[string]interface{}{
 				{
@@ -267,9 +355,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 				},
 			},
 		}
+		ctx.Buildpack.API = "0.6"
 		ctx.StackID = "test-stack-id"
 
-		result, err := libjvm.Build{}.Build(ctx)
+		result, err := liberica.Build{}.Build(ctx)
 		Expect(err).NotTo(HaveOccurred())
 
 		Expect(result.Layers[0].Name()).To(Equal("jdk"))
@@ -323,7 +412,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			}
 			ctx.StackID = "test-stack-id"
 
-			result, err := libjvm.Build{}.Build(ctx)
+			result, err := liberica.Build{}.Build(ctx)
 			Expect(err).NotTo(HaveOccurred())
 
 			Expect(result.Layers[0].(libjvm.JDK).LayerContributor.Dependency.Version).To(Equal("1.1.1"))
@@ -360,7 +449,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			}
 			ctx.StackID = "test-stack-id"
 
-			result, err := libjvm.Build{}.Build(ctx)
+			result, err := liberica.Build{}.Build(ctx)
 			Expect(err).NotTo(HaveOccurred())
 			Expect(result.Layers[0].Name()).To(Equal("jdk"))
 			Expect(result.Layers[0].(libjvm.JRE).LayerContributor.Dependency.ID).To(Equal("jdk"))
@@ -390,9 +479,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 					},
 				},
 			}
+			ctx.Buildpack.API = "0.6"
 			ctx.StackID = "test-stack-id"
 
-			result, err := libjvm.Build{}.Build(ctx)
+			result, err := liberica.Build{}.Build(ctx)
 			Expect(err).NotTo(HaveOccurred())
 			Expect(result.Layers[0].Name()).To(Equal("jdk"))
 			Expect(result.Layers[0].(libjvm.JDK).LayerContributor.Dependency.ID).To(Equal("jdk"))
