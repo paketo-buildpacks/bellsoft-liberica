@@ -490,6 +490,17 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			Expect(result.Layers[0].(libjvm.JDK).LayerContributor.Dependency.Version).To(Equal("2.2.2"))
 			Expect(result.Layers[1].(libjvm.JRE).LayerContributor.Dependency.Version).To(Equal("3.3.3"))
 		})
+
+		it("fails if unresolvable jdk version is requested", func() {
+			ctx.Plan.Entries = append(ctx.Plan.Entries,
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "5.5.5"}},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "2.2.2"}},
+			)
+
+			_, err := liberica.Build{}.Build(ctx)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("unable to find dependency\nno valid dependencies for jdk, 5.5.5"))
+		})
 	})
 
 	context("$BP_JVM_VERSION", func() {
