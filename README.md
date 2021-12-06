@@ -4,6 +4,52 @@ The Paketo BellSoft Liberica Buildpack is a Cloud Native Buildpack that provides
 
 This buildpack is designed to work in collaboration with other buildpacks which request contributions of JREs and JDKs.
 
+## Integration
+
+Downstream buildpacks can require the JRE/JDK dependency by generating a [Build Plan
+TOML](https://github.com/buildpacks/spec/blob/master/buildpack.md#build-plan-toml)
+file that looks like the following:
+
+```toml
+[[requires]]
+
+  # The name of the JRE dependency is "jre". This value is considered
+  # part of the public API for the buildpack and will not change without a plan
+  # for deprecation.
+  name = "jre"
+
+  # The version of the JRE dependency is not required. In the case it
+  # is not specified, the buildpack will provide the default version, which can
+  # be seen in the buildpack.toml file.
+  # If you wish to request a specific version, the buildpack supports
+  # specifying a semver constraint in the form of "11.*", "11.0.*", or even
+  # "11.0.13".
+  version = "11.0.13"
+
+  # The BellSoft Liberica buildpack supports some non-required metadata options.
+  [requires.metadata]
+    # Setting the launch flag to true will ensure that the BellSoft Liberica
+    # dependency is available on the $PATH for the running application. If you are
+    # writing an application that needs to run node at runtime, this flag should
+    # be set to true.
+    launch = true
+
+[[requires]]
+
+  # The name of the JDK dependency is "jdk". This value is considered
+  # part of the public API for the buildpack and will not change without a plan
+  # for deprecation.
+  name = "jdk"
+
+  # The version of the JDK dependency is not required. In the case it
+  # is not specified, the buildpack will provide the default version, which can
+  # be seen in the buildpack.toml file.
+  # If you wish to request a specific version, the buildpack supports
+  # specifying a semver constraint in the form of "11.*", "11.0.*", or even
+  # "11.0.13".
+  version = "11.0.13"
+```
+
 ## Behavior
 
 This buildpack will participate if any of the following conditions are met

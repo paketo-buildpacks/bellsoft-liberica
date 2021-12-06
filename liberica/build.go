@@ -57,14 +57,12 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 	cl := libjvm.NewCertificateLoader()
 	cl.Logger = b.Logger.BodyWriter()
 
-	v, _ := cr.Resolve("BP_JVM_VERSION")
-
 	jreSkipped := false
 	if t, _ := cr.Resolve("BP_JVM_TYPE"); strings.ToLower(t) == "jdk" {
 		jreSkipped = true
 	}
 
-	_, jdkRequired, err := pr.Resolve("jdk")
+	jdkPlanEntry, jdkRequired, err := pr.Resolve("jdk")
 	if err != nil {
 		return libcnb.BuildResult{}, fmt.Errorf("unable to resolve jdk plan entry\n%w", err)
 	}
@@ -74,9 +72,11 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 		return libcnb.BuildResult{}, fmt.Errorf("unable to resolve jre plan entry\n%w", err)
 	}
 
+	jdkVersion, jreVersion := calculateVersions(jdkPlanEntry, jrePlanEntry, cr)
+
 	jreAvailable := jreRequired
 	if jreRequired {
-		_, err := dr.Resolve("jre", v)
+		_, err := dr.Resolve("jre", jreVersion)
 		if libpak.IsNoValidDependencies(err) {
 			jreAvailable = false
 		}
@@ -88,7 +88,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 	}
 
 	if nativeImage {
-		dep, err := dr.Resolve("native-image-svm", v)
+		dep, err := dr.Resolve("native-image-svm", jdkVersion)
 		if err != nil {
 			return libcnb.BuildResult{}, fmt.Errorf("unable to find dependency\n%w", err)
 		}
@@ -110,7 +110,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 	// 3. a user has not requested to use the JDK as a JRE
 	// 4. we're not installing native image tools
 	if jdkRequired && !(jreRequired && !jreAvailable) && !jreSkipped && !nativeImage {
-		dep, err := dr.Resolve("jdk", v)
+		dep, err := dr.Resolve("jdk", jdkVersion)
 		if err != nil {
 			return libcnb.BuildResult{}, fmt.Errorf("unable to find dependency\n%w", err)
 		}
@@ -129,7 +129,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 
 	if jreRequired && !nativeImage {
 		dt := libjvm.JREType
-		depJRE, err := dr.Resolve("jre", v)
+		depJRE, err := dr.Resolve("jre", jreVersion)
 
 		if !jreAvailable || jreSkipped {
 			b.warnIfJreNotUsed(jreAvailable, jreSkipped)
@@ -139,7 +139,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 			jrePlanEntry.Metadata["cache"] = true
 
 			dt = libjvm.JDKType
-			depJRE, err = dr.Resolve("jdk", v)
+			depJRE, err = dr.Resolve("jdk", jdkVersion)
 		}
 
 		if err != nil {
@@ -203,4 +203,29 @@ func (b Build) warnIfJreNotUsed(jreAvailable, jreSkipped bool) {
 	}
 
 	b.Logger.Header(color.New(color.FgYellow, color.Bold).Sprint(msg))
+}
+
+func calculateVersions(jdkEntry, jreEntry libcnb.BuildpackPlanEntry, cr libpak.ConfigurationResolver) (string, string) {
+	v, explicit := cr.Resolve("BP_JVM_VERSION")
+
+	if explicit {
+		return v, v
+	}
+
+	jdkVersion, jdkVersionRequired := jdkEntry.Metadata["version"]
+	jreVersion, jreVersionRequired := jreEntry.Metadata["version"]
+
+	if jdkVersionRequired && !jreVersionRequired {
+		return fmt.Sprintf("%v", jdkVersion), fmt.Sprintf("%v", jdkVersion)
+	}
+
+	if !jdkVersionRequired && jreVersionRequired {
+		return fmt.Sprintf("%v", jreVersion), fmt.Sprintf("%v", jreVersion)
+	}
+
+	if jdkVersionRequired && jreVersionRequired {
+		return fmt.Sprintf("%v", jdkVersion), fmt.Sprintf("%v", jreVersion)
+	}
+
+	return v, v
 }
