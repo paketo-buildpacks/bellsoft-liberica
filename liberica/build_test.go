@@ -442,7 +442,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		it("contributes the version required by the jre plan entry", func() {
 			ctx.Plan.Entries = append(ctx.Plan.Entries,
 				libcnb.BuildpackPlanEntry{Name: "jdk"},
-				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "2.2.2"}},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "2.*"}},
 			)
 
 			result, err := liberica.Build{}.Build(ctx)
@@ -454,7 +454,7 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 
 		it("contributes the version required by the jdk plan entry", func() {
 			ctx.Plan.Entries = append(ctx.Plan.Entries,
-				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.2.2"}},
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.*"}},
 				libcnb.BuildpackPlanEntry{Name: "jre"},
 			)
 
@@ -467,21 +467,8 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 
 		it("contributes the version required by the jdk & jre plan entries", func() {
 			ctx.Plan.Entries = append(ctx.Plan.Entries,
-				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.2.2"}},
-				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "3.3.3"}},
-			)
-
-			result, err := liberica.Build{}.Build(ctx)
-			Expect(err).NotTo(HaveOccurred())
-
-			Expect(result.Layers[0].(libjvm.JDK).LayerContributor.Dependency.Version).To(Equal("2.2.2"))
-			Expect(result.Layers[1].(libjvm.JRE).LayerContributor.Dependency.Version).To(Equal("3.3.3"))
-		})
-
-		it("contributes the version required by the jdk & jre plan entries", func() {
-			ctx.Plan.Entries = append(ctx.Plan.Entries,
-				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.2.2"}},
-				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "3.3.3"}},
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.*"}},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "3.*"}},
 			)
 
 			result, err := liberica.Build{}.Build(ctx)
@@ -493,13 +480,24 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 
 		it("fails if unresolvable jdk version is requested", func() {
 			ctx.Plan.Entries = append(ctx.Plan.Entries,
-				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "5.5.5"}},
-				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "2.2.2"}},
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "5.*"}},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "2.*"}},
 			)
 
 			_, err := liberica.Build{}.Build(ctx)
 			Expect(err).To(HaveOccurred())
-			Expect(err.Error()).To(ContainSubstring("unable to find dependency\nno valid dependencies for jdk, 5.5.5"))
+			Expect(err.Error()).To(ContainSubstring("unable to find dependency\nno valid dependencies for jdk, 5.*"))
+		})
+
+		it("fails if unresolvable jre version is requested", func() {
+			ctx.Plan.Entries = append(ctx.Plan.Entries,
+				libcnb.BuildpackPlanEntry{Name: "jdk", Metadata: map[string]interface{}{"version": "2.*"}},
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: map[string]interface{}{"version": "5.*"}},
+			)
+
+			_, err := liberica.Build{}.Build(ctx)
+			Expect(err).To(HaveOccurred())
+			Expect(err.Error()).To(ContainSubstring("unable to find dependency\nno valid dependencies for jdk, 5.*"))
 		})
 	})
 

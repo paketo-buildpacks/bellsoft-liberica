@@ -139,7 +139,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 			jrePlanEntry.Metadata["cache"] = true
 
 			dt = libjvm.JDKType
-			depJRE, err = dr.Resolve("jdk", jdkVersion)
+			depJRE, err = dr.Resolve("jdk", jreVersion)
 		}
 
 		if err != nil {
