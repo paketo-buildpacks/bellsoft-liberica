@@ -127,56 +127,56 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update312:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update322:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@8.0.312?arch=amd64"
-    sha256 = "8fdcc27ff96a6653912955d529bdda735c93450a3525ce019e549116f5a17919"
+    purl = "pkg:generic/bellsoft-jdk@8.0.322?arch=amd64"
+    sha256 = "adc0e981e57e5e92bd7e3a61003809733cf6ca78fbd2611e345c3ab8352db643"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u312+7/bellsoft-jdk8u312+7-linux-amd64.tar.gz"
-    version = "8.0.312"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u322+6/bellsoft-jdk8u322+6-linux-amd64.tar.gz"
+    version = "8.0.322"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update312:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update322:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@8.0.312?arch=amd64"
-    sha256 = "9850e06b83c891bd96b1b3757e1d04a287800cb4c1e7dc5e3044e1967ce64ef6"
+    purl = "pkg:generic/bellsoft-jre@8.0.322?arch=amd64"
+    sha256 = "497c3796442aa74bee9fce4eaa2b2853b9a1fbad012469c8c22c6869103e116a"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u312+7/bellsoft-jre8u312+7-linux-amd64.tar.gz"
-    version = "8.0.312"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u322+6/bellsoft-jre8u322+6-linux-amd64.tar.gz"
+    version = "8.0.322"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:11.0.13:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:11.0.14:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@11.0.13?arch=amd64"
-    sha256 = "7f3849a0b663e644bffd48c59b7cba76a24ba6bf1e66a2f34b08c2fb4689b1e4"
+    purl = "pkg:generic/bellsoft-jdk@11.0.14?arch=amd64"
+    sha256 = "32aa3ceedcc08d24b33a7b7fa4e826855916d5bd35d2e609aa6a58bf88767c1c"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.13+8/bellsoft-jdk11.0.13+8-linux-amd64.tar.gz"
-    version = "11.0.13"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.14+9/bellsoft-jdk11.0.14+9-linux-amd64.tar.gz"
+    version = "11.0.14"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:11.0.13:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:11.0.14:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@11.0.13?arch=amd64"
-    sha256 = "8bad208be75e67204bcc90cafc35d73506a0ec7cfc384674595003db69241965"
+    purl = "pkg:generic/bellsoft-jre@11.0.14?arch=amd64"
+    sha256 = "d3cbf24c79e8bfc22dcbbb5f1f65d84e177446488413734824005f7a05c85e4e"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.13+8/bellsoft-jre11.0.13+8-linux-amd64.tar.gz"
-    version = "11.0.13"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.14+9/bellsoft-jre11.0.14+9-linux-amd64.tar.gz"
+    version = "11.0.14"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
@@ -211,14 +211,14 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:17.0.1:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:17.0.2:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@17.0.1?arch=amd64"
-    sha256 = "9b937fe5dfe37547cef0b5952f38ef098d8cb6307763e4c4036eff315614bb93"
+    purl = "pkg:generic/bellsoft-jre@17.0.2?arch=amd64"
+    sha256 = "8e6e2167d3975f774d7d9ce20996dff4e2406344d609b8b3436c4f5b0fe58bc7"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.1+12/bellsoft-jre17.0.1+12-linux-amd64.tar.gz"
-    version = "17.0.1"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.2+9/bellsoft-jre17.0.2+9-linux-amd64.tar.gz"
+    version = "17.0.2"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
