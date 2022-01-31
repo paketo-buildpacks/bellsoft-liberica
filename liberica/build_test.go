@@ -89,7 +89,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.Layers).To(HaveLen(1))
 		Expect(result.Layers[0].Name()).To(Equal("jdk"))
 
-		Expect(result.BOM.Entries).To(HaveLen(0))
+		Expect(result.BOM.Entries).To(HaveLen(1))
+		Expect(result.BOM.Entries[0].Name).To(Equal("jdk"))
+		Expect(result.BOM.Entries[0].Launch).To(BeFalse())
+		Expect(result.BOM.Entries[0].Build).To(BeTrue())
 	})
 
 	it("contributes NIK API <= 0.6", func() {
@@ -148,7 +151,10 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.Layers).To(HaveLen(1))
 		Expect(result.Layers[0].Name()).To(Equal("native-image-svm"))
 
-		Expect(result.BOM.Entries).To(HaveLen(0))
+		Expect(result.BOM.Entries).To(HaveLen(1))
+		Expect(result.BOM.Entries[0].Name).To(Equal("native-image-svm"))
+		Expect(result.BOM.Entries[0].Launch).To(BeFalse())
+		Expect(result.BOM.Entries[0].Build).To(BeTrue())
 	})
 
 	it("contributes NIK alternative buildplan", func() {
@@ -239,7 +245,11 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.Layers[1].Name()).To(Equal("helper"))
 		Expect(result.Layers[2].Name()).To(Equal("java-security-properties"))
 
-		Expect(result.BOM.Entries).To(HaveLen(0))
+		Expect(result.BOM.Entries).To(HaveLen(2))
+		Expect(result.BOM.Entries[0].Name).To(Equal("jre"))
+		Expect(result.BOM.Entries[0].Launch).To(BeTrue())
+		Expect(result.BOM.Entries[1].Name).To(Equal("helper"))
+		Expect(result.BOM.Entries[1].Launch).To(BeTrue())
 	})
 
 	it("contributes security-providers-classpath-8 before Java 9", func() {

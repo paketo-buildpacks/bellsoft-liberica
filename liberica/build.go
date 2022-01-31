@@ -100,9 +100,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 
 		jdk.Logger = b.Logger
 		result.Layers = append(result.Layers, jdk)
-		if be.Name != "" {
-			result.BOM.Entries = append(result.BOM.Entries, be)
-		}
+		result.BOM.Entries = append(result.BOM.Entries, be)
 	}
 
 	// 1. we need a JDK
@@ -122,9 +120,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 
 		jdk.Logger = b.Logger
 		result.Layers = append(result.Layers, jdk)
-		if be.Name != "" {
-			result.BOM.Entries = append(result.BOM.Entries, be)
-		}
+		result.BOM.Entries = append(result.BOM.Entries, be)
 	}
 
 	if jreRequired && !nativeImage {
@@ -153,9 +149,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 
 		jre.Logger = b.Logger
 		result.Layers = append(result.Layers, jre)
-		if be.Name != "" {
-			result.BOM.Entries = append(result.BOM.Entries, be)
-		}
+		result.BOM.Entries = append(result.BOM.Entries, be)
 
 		if libjvm.IsLaunchContribution(jrePlanEntry.Metadata) {
 			helpers := []string{"active-processor-count", "java-opts", "jvm-heap", "link-local-dns", "memory-calculator",
@@ -172,9 +166,7 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 			h, be := libpak.NewHelperLayer(context.Buildpack, helpers...)
 			h.Logger = b.Logger
 			result.Layers = append(result.Layers, h)
-			if be.Name != "" {
-				result.BOM.Entries = append(result.BOM.Entries, be)
-			}
+			result.BOM.Entries = append(result.BOM.Entries, be)
 
 			jsp := libjvm.NewJavaSecurityProperties(context.Buildpack.Info)
 			jsp.Logger = b.Logger
