@@ -91,7 +91,7 @@ jobs:
                 CPE_PATTERN: ""
                 ID: native-image-svm
                 PURL: ${{ steps.dependency.outputs.purl }}
-                PURL_PATTERN: ""
+                PURL_PATTERN: '[\d]+\.[\d]+\.[\d]+\.?[\d]?'
                 SHA256: ${{ steps.dependency.outputs.sha256 }}
                 URI: ${{ steps.dependency.outputs.uri }}
                 VERSION: ${{ steps.dependency.outputs.version }}

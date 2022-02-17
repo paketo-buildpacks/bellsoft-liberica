@@ -54,6 +54,7 @@ dependencies:
 - name:            Native Image 11
   id:              native-image-svm
   version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: nik
@@ -63,6 +64,7 @@ dependencies:
   id:              native-image-svm
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
   with:
     product: nik
     type:    core
