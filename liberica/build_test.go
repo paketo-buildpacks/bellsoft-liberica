@@ -20,7 +20,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
+	"github.com/paketo-buildpacks/bellsoft-liberica/v9/liberica"
 
 	"github.com/buildpacks/libcnb"
 	. "github.com/onsi/gomega"
