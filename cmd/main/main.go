@@ -19,7 +19,7 @@ package main
 import (
 	"os"
 
-	"github.com/paketo-buildpacks/bellsoft-liberica/liberica"
+	"github.com/paketo-buildpacks/bellsoft-liberica/v9/liberica"
 	"github.com/paketo-buildpacks/libjvm/helper"
 
 	"github.com/paketo-buildpacks/libpak"
