@@ -57,7 +57,11 @@ func (b Build) Build(context libcnb.BuildContext) (libcnb.BuildResult, error) {
 	cl := libjvm.NewCertificateLoader()
 	cl.Logger = b.Logger.BodyWriter()
 
-	v, _ := cr.Resolve("BP_JVM_VERSION")
+	jvmVersion := libjvm.JVMVersion{Logger: b.Logger}
+	v, err := jvmVersion.GetJVMVersion(context.Application.Path, cr)
+	if err != nil {
+		return libcnb.BuildResult{}, fmt.Errorf("unable to determine jvm version\n%w", err)
+	}
 
 	jreSkipped := false
 	if t, _ := cr.Resolve("BP_JVM_TYPE"); strings.ToLower(t) == "jdk" {
