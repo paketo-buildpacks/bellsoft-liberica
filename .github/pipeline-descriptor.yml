@@ -19,7 +19,7 @@ docker_credentials:
 dependencies:
 - name:            JDK 8
   id:              jdk
-  version_pattern: "8\\.[\\d]+\\.[\\d]+"
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
   cpe_pattern:     "update[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
@@ -28,7 +28,7 @@ dependencies:
     version: "8"
 - name:            JRE 8
   id:              jre
-  version_pattern: "8\\.[\\d]+\\.[\\d]+"
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
   cpe_pattern:     "update[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
@@ -85,3 +85,19 @@ dependencies:
     product: liberica
     type:    jre
     version: "17"
+- name:            JDK 18
+  id:              jdk
+  version_pattern: "18\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "18"
+- name:            JRE 18
+  id:              jre
+  version_pattern: "18\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "18"
