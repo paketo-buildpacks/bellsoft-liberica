@@ -231,7 +231,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jdk@18.0.0?arch=amd64"
     sha256 = "ff33131eefadc36c297369ca7a2bc51de91df6924a6b89f1d80494b4cc426416"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/18%2B37/bellsoft-jdk18+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/18+37/bellsoft-jdk18+37-linux-amd64.tar.gz"
     version = "18.0.0"
 
     [[metadata.dependencies.licenses]]
