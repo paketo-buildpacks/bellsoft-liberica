@@ -245,7 +245,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jre@18.0.0?arch=amd64"
     sha256 = "35a49f0569a1dec7cb6fa8af1e89347a67a1b01774a9357ff031168933dd4bca"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/18%2B37/bellsoft-jre18+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/18+37/bellsoft-jre18+37-linux-amd64.tar.gz"
     version = "18.0.0"
 
     [[metadata.dependencies.licenses]]
