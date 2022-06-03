@@ -229,9 +229,9 @@ api = "0.7"
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@18.0.1?arch=amd64"
-    sha256 = "9f5002a883ec6830eb7e7498feb6dc2824f23da186938c4fb7a081310ca157c3"
+    sha256 = "40f464951af5fb5eaf4b9f775004594fa2fcbe39e18e2acb71983ab154b7a5a1"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/18.0.1+12/bellsoft-jdk18.0.1+12-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/18.0.1.1+2/bellsoft-jdk18.0.1.1+2-linux-amd64.tar.gz"
     version = "18.0.1"
 
     [[metadata.dependencies.licenses]]
