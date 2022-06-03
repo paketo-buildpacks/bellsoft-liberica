@@ -141,14 +141,14 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update332:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update333:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@8.0.332?arch=amd64"
-    sha256 = "27010a3b00f898725bbc138c3f60930c0df33f772e6cdafc23eb1c79d6064270"
+    sha256 = "26353d659906f2f758d6737c0fa63a1f9bbdc8fefd9ab6bfbeae479e46d449e4"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u332+9/bellsoft-jre8u332+9-linux-amd64.tar.gz"
-    version = "8.0.332"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u333+2/bellsoft-jre8u333+2-linux-amd64.tar.gz"
+    version = "8.0.333"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
