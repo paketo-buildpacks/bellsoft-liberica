@@ -252,38 +252,49 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 		Expect(result.BOM.Entries[1].Launch).To(BeTrue())
 	})
 
-	it("contributes security-providers-classpath-8 before Java 9", func() {
-		ctx.Plan.Entries = append(
-			ctx.Plan.Entries,
-			libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
-		ctx.Buildpack.Metadata = map[string]interface{}{
-			"dependencies": []map[string]interface{}{
-				{
-					"id":      "jre",
-					"version": "8.0.0",
-					"stacks":  []interface{}{"test-stack-id"},
+	context("Java 8", func() {
+		it.Before(func() {
+			Expect(os.Setenv("BP_JVM_VERSION", "8.0.0")).To(Succeed())
+		})
+
+		it.After(func() {
+			Expect(os.Unsetenv("BP_JVM_VERSION")).To(Succeed())
+		})
+
+		it("contributes security-providers-classpath-8 before Java 9", func() {
+			ctx.Plan.Entries = append(
+				ctx.Plan.Entries,
+				libcnb.BuildpackPlanEntry{Name: "jre", Metadata: LaunchContribution})
+			ctx.Buildpack.Metadata = map[string]interface{}{
+				"dependencies": []map[string]interface{}{
+					{
+						"id":      "jre",
+						"version": "8.0.0",
+						"stacks":  []interface{}{"test-stack-id"},
+					},
 				},
-			},
-		}
-		ctx.StackID = "test-stack-id"
+			}
+			ctx.StackID = "test-stack-id"
 
-		result, err := liberica.Build{}.Build(ctx)
-		Expect(err).NotTo(HaveOccurred())
-
-		Expect(result.Layers[1].(libpak.HelperLayerContributor).Names).To(Equal([]string{
-			"active-processor-count",
-			"java-opts",
-			"jvm-heap",
-			"link-local-dns",
-			"memory-calculator",
-			"security-providers-configurer",
-			"jmx",
-			"jfr",
-			"nmt",
-			"security-providers-classpath-8",
-			"debug-8",
-			"openssl-certificate-loader",
-		}))
+			result, err := liberica.Build{}.Build(ctx)
+			Expect(err).NotTo(HaveOccurred())
+			Expect(result.Layers[1].(libpak.HelperLayerContributor).Names).To(Equal([]string{
+				"active-processor-count",
+				"java-opts",
+				"jvm-heap",
+				"link-local-dns",
+				"memory-calculator",
+				"security-providers-configurer",
+				"jmx",
+				"jfr",
+				"security-providers-classpath-8",
+				"debug-8",
+				"openssl-certificate-loader",
+			}))
+			Expect(result.Layers[3].(libpak.HelperLayerContributor).Names).To(Equal([]string{
+				"nmt",
+			}))
+		})
 	})
 
 	it("contributes security-providers-classpath-9 after Java 9", func() {
@@ -313,9 +324,9 @@ func testBuild(t *testing.T, context spec.G, it spec.S) {
 			"security-providers-configurer",
 			"jmx",
 			"jfr",
-			"nmt",
 			"security-providers-classpath-9",
 			"debug-9",
+			"nmt",
 			"openssl-certificate-loader",
 		}))
 	})
