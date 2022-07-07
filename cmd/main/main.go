@@ -17,10 +17,9 @@
 package main
 
 import (
-	"os"
-
-	"github.com/paketo-buildpacks/bellsoft-liberica/v9/liberica"
+	"github.com/paketo-buildpacks/libjvm"
 	"github.com/paketo-buildpacks/libjvm/helper"
+	"os"
 
 	"github.com/paketo-buildpacks/libpak"
 	"github.com/paketo-buildpacks/libpak/bard"
@@ -34,7 +33,11 @@ func main() {
 	_ = helper.ActiveProcessorCount{Logger: logger}
 
 	libpak.Main(
-		liberica.Detect{},
-		liberica.Build{Logger: logger},
+		libjvm.Detect{},
+		libjvm.NewBuild(logger, libjvm.WithNativeImage(
+			libjvm.NativeImage{
+				BundledWithJDK: true,
+			}),
+			libjvm.WithCustomHelpers([]string{"nmt"})),
 	)
 }
