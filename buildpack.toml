@@ -110,15 +110,15 @@ api = "0.7"
     name = "BPL_JFR_ARGS"
 
   [[metadata.configurations]]
+    build = true
     default = "false"
     description = "enables running jlink tool to generate custom JRE"
-    build = true
     name = "BP_JVM_JLINK_ENABLED"
 
   [[metadata.configurations]]
+    build = true
     default = "--no-man-pages --no-header-files --strip-debug --compress=1"
     description = "configure custom link arguments (--output must be omitted)"
-    build = true
     name = "BP_JVM_JLINK_ARGS"
 
   [[metadata.configurations]]
