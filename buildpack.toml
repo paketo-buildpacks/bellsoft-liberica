@@ -139,14 +139,14 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update333:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update342:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@8.0.332?arch=amd64"
-    sha256 = "52b5d16b97d2cb12198e6e6a6dade60b20dbcc061c3c4272a40852bc30cfd13b"
+    sha256 = "10fa7f77e4576aa3639eee7eec12eba153604add760eaefd898e4ec610ffb0f6"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u333+2/bellsoft-jdk8u333+2-linux-amd64.tar.gz"
-    version = "8.0.333"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u342+7/bellsoft-jdk8u342+7-linux-amd64.tar.gz"
+    version = "8.0.342"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
