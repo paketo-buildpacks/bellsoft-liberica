@@ -185,9 +185,9 @@ api = "0.7"
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@11.0.16?arch=amd64"
-    sha256 = "d9e9ba6e872c2d7073e69407196be29db27d4fcd22de6ca7dde40840b934c286"
+    sha256 = "e3eeaf929a03a58b61cb400ccdfdf966189233a85911e07e8ca66446319dce4c"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.16+8/bellsoft-jre11.0.16+8-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.16.1+1/bellsoft-jre11.0.16.1+1-linux-amd64.tar.gz"
     version = "11.0.16"
 
     [[metadata.dependencies.licenses]]
