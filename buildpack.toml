@@ -19,7 +19,7 @@ api = "0.7"
   homepage = "https://github.com/paketo-buildpacks/bellsoft-liberica"
   id = "paketo-buildpacks/bellsoft-liberica"
   keywords = ["java", "jvm", "jre", "jdk"]
-  name = "Paketo BellSoft Liberica Buildpack"
+  name = "Paketo Buildpack for BellSoft Liberica"
   sbom-formats = ["application/vnd.syft+json", "application/vnd.cyclonedx+json"]
   version = "{{.version}}"
 
