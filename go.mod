@@ -4,13 +4,13 @@ go 1.18
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.40.0
-	github.com/paketo-buildpacks/libpak v1.61.0
+	github.com/paketo-buildpacks/libpak v1.62.0
 )
 
 require (
 	github.com/BurntSushi/toml v1.2.0 // indirect
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
-	github.com/buildpacks/libcnb v1.26.0 // indirect
+	github.com/buildpacks/libcnb v1.27.0 // indirect
 	github.com/creack/pty v1.1.18 // indirect
 	github.com/h2non/filetype v1.1.3 // indirect
 	github.com/heroku/color v0.0.6 // indirect
@@ -27,6 +27,6 @@ require (
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
 	golang.org/x/net v0.0.0-20220826154423-83b083e8dc8b // indirect
-	golang.org/x/sys v0.0.0-20220825204002-c680a09ffe64 // indirect
+	golang.org/x/sys v0.0.0-20220829200755-d48e67d00261 // indirect
 	golang.org/x/tools v0.1.12 // indirect
 )
