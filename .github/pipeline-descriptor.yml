@@ -101,3 +101,19 @@ dependencies:
     product: liberica
     type:    jre
     version: "18"
+- name:            JDK 19
+  id:              jdk
+  version_pattern: "19\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "19"
+- name:            JRE 19
+  id:              jre
+  version_pattern: "19\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "19"
