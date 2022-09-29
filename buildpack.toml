@@ -281,7 +281,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jdk@19.0.0?arch=amd64"
     sha256 = "b7b4b42c4acc050dbf0e0169c19d7d229e999f8f1676dff2f4a5ba63c701b220"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/19%2B37/bellsoft-jdk19+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/19+37/bellsoft-jdk19+37-linux-amd64.tar.gz"
     version = "19.0.0"
 
     [[metadata.dependencies.licenses]]
