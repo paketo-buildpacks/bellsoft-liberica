@@ -295,7 +295,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jre@19.0.0?arch=amd64"
     sha256 = "aa756984467996c23b58500e45e9abb069a55323c78caedf0b97e9c922baa6a7"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/19%2B37/bellsoft-jre19+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/19+37/bellsoft-jre19+37-linux-amd64.tar.gz"
     version = "19.0.0"
 
     [[metadata.dependencies.licenses]]
