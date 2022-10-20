@@ -142,7 +142,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update352:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@8.0.332?arch=amd64"
+    purl = "pkg:generic/bellsoft-jdk@8.0.352?arch=amd64"
     sha256 = "2b5c94fe51c7a9094b44a9cdb9e79109b92051793d0530266fc2e7b2f41463aa"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/8u352+8/bellsoft-jdk8u352+8-linux-amd64.tar.gz"
