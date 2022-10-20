@@ -156,7 +156,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update352:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@8.0.332?arch=amd64"
+    purl = "pkg:generic/bellsoft-jre@8.0.345?arch=amd64"
     sha256 = "c1afaea35fae3c921851c301bf68795c9adbb24575eb64f7194cdae48afb3f56"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/8u352+8/bellsoft-jre8u352+8-linux-amd64.tar.gz"
