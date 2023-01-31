@@ -57,9 +57,11 @@ jobs:
                 git add .github/
                 git checkout -- .
 
-                echo "::set-output name=old-version::${OLD_VERSION}"
-                echo "::set-output name=new-version::${NEW_VERSION}"
-                echo "::set-output name=release-notes::${RELEASE_NOTES//$'\n'/%0A}"
+                echo "old-version=${OLD_VERSION}" >> "$GITHUB_OUTPUT"
+                echo "new-version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
+
+                DELIMITER=$(openssl rand -hex 16) # roughly the same entropy as uuid v4 used in https://github.com/actions/toolkit/blob/b36e70495fbee083eb20f600eafa9091d832577d/packages/core/src/file-command.ts#L28
+                printf "release-notes<<%s\n%s\n%s\n" "${DELIMITER}" "${RELEASE_NOTES}" "${DELIMITER}" >> "${GITHUB_OUTPUT}" # see https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
               env:
                 DESCRIPTOR: .github/pipeline-descriptor.yml
                 GITHUB_TOKEN: ${{ secrets.JAVA_GITHUB_TOKEN }}
