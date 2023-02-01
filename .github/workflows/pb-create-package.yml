@@ -227,5 +227,5 @@ jobs:
               with:
                 address: docker.io/paketobuildpacks/bellsoft-liberica@${{ steps.package.outputs.digest }}
                 id: paketo-buildpacks/bellsoft-liberica
-                token: ${ secrets.PAKETO_BOT_GITHUB_TOKEN }
+                token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
                 version: ${{ steps.version.outputs.version }}
