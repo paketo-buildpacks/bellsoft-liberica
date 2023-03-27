@@ -271,7 +271,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jre@20.0.0?arch=amd64"
     sha256 = "c5be673000ffcc1a0798dc4f48aba814fa686bde9a0dad09a4422279c2e719ed"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/20%2B37/bellsoft-jre20+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/20+37/bellsoft-jre20+37-linux-amd64.tar.gz"
     version = "20.0.0"
 
     [[metadata.dependencies.licenses]]
