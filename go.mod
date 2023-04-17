@@ -1,6 +1,6 @@
 module github.com/paketo-buildpacks/bellsoft-liberica/v9
 
-go 1.18
+go 1.20
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.41.0
@@ -9,8 +9,8 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/Masterminds/semver/v3 v3.2.0 // indirect
-	github.com/buildpacks/libcnb v1.27.0 // indirect
+	github.com/Masterminds/semver/v3 v3.2.1 // indirect
+	github.com/buildpacks/libcnb v1.28.0 // indirect
 	github.com/creack/pty v1.1.18 // indirect
 	github.com/h2non/filetype v1.1.3 // indirect
 	github.com/heroku/color v0.0.6 // indirect
