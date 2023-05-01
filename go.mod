@@ -19,7 +19,7 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.18 // indirect
 	github.com/mattn/go-shellwords v1.0.12 // indirect
-	github.com/miekg/dns v1.1.53 // indirect
+	github.com/miekg/dns v1.1.54 // indirect
 	github.com/mitchellh/hashstructure/v2 v2.0.2 // indirect
 	github.com/onsi/gomega v1.27.6 // indirect
 	github.com/pavlo-v-chernykh/keystore-go/v4 v4.4.1 // indirect
