@@ -4,11 +4,11 @@ go 1.20
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.43.0
-	github.com/paketo-buildpacks/libpak v1.65.0
+	github.com/paketo-buildpacks/libpak v1.66.0
 )
 
 require (
-	github.com/BurntSushi/toml v1.3.0 // indirect
+	github.com/BurntSushi/toml v1.3.1 // indirect
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
 	github.com/buildpacks/libcnb v1.28.0 // indirect
 	github.com/creack/pty v1.1.18 // indirect
@@ -23,7 +23,6 @@ require (
 	github.com/mitchellh/hashstructure/v2 v2.0.2 // indirect
 	github.com/onsi/gomega v1.27.7 // indirect
 	github.com/pavlo-v-chernykh/keystore-go/v4 v4.4.1 // indirect
-	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
