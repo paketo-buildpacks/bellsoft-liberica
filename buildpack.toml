@@ -240,10 +240,10 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:graalvm:22.3.0:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:17.0.7:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
-    purl = "pkg:generic/bellsoft-nik@22.3.2?arch=amd64"
-    sha256 = "dc79126c929f9e4dccacbdb8a680cf3600fbe582cb9b1ea3dfb94b2166a59fbd"
+    purl = "pkg:generic/bellsoft-nik@23.0.0?arch=amd64"
+    sha256 = "2e9d5bf780aeb506ef9276d783e529de6248515a1ac1f1030ed8d43180c50ef2"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/22.3.2/bellsoft-liberica-vm-core-openjdk17.0.7+7-22.3.2+1-linux-amd64.tar.gz"
+    uri = "https://download.bell-sw.com/vm/23.0.0/bellsoft-liberica-vm-core-openjdk17.0.7+7-23.0.0+1-linux-amd64.tar.gz"
     version = "17.0.7"
 
     [[metadata.dependencies.licenses]]
