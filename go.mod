@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.43.2
-	github.com/paketo-buildpacks/libpak v1.66.1
+	github.com/paketo-buildpacks/libpak v1.66.2
 )
 
 require (
