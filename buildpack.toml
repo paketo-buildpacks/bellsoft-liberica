@@ -195,14 +195,14 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:graalvm:22.1.0:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:11.0.19:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:graalvm:22.1.0:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:11.0.20:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
-    purl = "pkg:generic/bellsoft-nik@22.3.2?arch=amd64"
-    sha256 = "a6d6f945b637386e5bf456c204c1f2d2b7b503a830f118b3a861eb85d7ef6356"
+    purl = "pkg:generic/bellsoft-nik@22.3.3?arch=amd64"
+    sha256 = "67f9f2c79fe242f604378d08ac3427da590af7bd6476269277f988d3376ec074"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/22.3.2/bellsoft-liberica-vm-core-openjdk11.0.19+7-22.3.2+1-linux-amd64.tar.gz"
-    version = "11.0.19"
+    uri = "https://download.bell-sw.com/vm/22.3.3/bellsoft-liberica-vm-core-openjdk11.0.20+8-22.3.3+1-linux-amd64.tar.gz"
+    version = "11.0.20"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
