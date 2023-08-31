@@ -199,9 +199,9 @@ api = "0.7"
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
     purl = "pkg:generic/bellsoft-nik@22.3.3?arch=amd64"
-    sha256 = "67f9f2c79fe242f604378d08ac3427da590af7bd6476269277f988d3376ec074"
+    sha256 = "e983efef3ba64a8620993e69798d20a2f15cd3407462a46fd8cd58ee3614f556"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/22.3.3/bellsoft-liberica-vm-core-openjdk11.0.20+8-22.3.3+1-linux-amd64.tar.gz"
+    uri = "https://download.bell-sw.com/vm/22.3.3/bellsoft-liberica-vm-core-openjdk11.0.20.1+1-22.3.3+2-linux-amd64.tar.gz"
     version = "11.0.20"
 
     [[metadata.dependencies.licenses]]
