@@ -271,7 +271,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jre@21.0.0?arch=amd64"
     sha256 = "3f1a4f0cd60af82bdaf773f99fe5502da047b72a1593e7ddb668d0490c0a0779"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21%2B37/bellsoft-jre21+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21+37/bellsoft-jre21+37-linux-amd64.tar.gz"
     version = "21.0.0"
 
     [[metadata.dependencies.licenses]]
