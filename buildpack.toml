@@ -257,7 +257,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jdk@21.0.0?arch=amd64"
     sha256 = "22005e92897fa5ee3d2baaafca6242fd408a54e3d093127359b00e26330fcb02"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21%2B37/bellsoft-jdk21+37-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21+37/bellsoft-jdk21+37-linux-amd64.tar.gz"
     version = "21.0.0"
 
     [[metadata.dependencies.licenses]]
