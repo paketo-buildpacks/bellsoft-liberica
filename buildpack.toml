@@ -214,6 +214,8 @@ api = "0.7"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@17.0.8?arch=amd64"
     sha256 = "8b2a27a576d0c8afc4d41f8e836c60ff4c04bbf747fc491d240975396d4e8cb8"
+    source = "https://github.com/bell-sw/Liberica/releases/download/17.0.8.1+1/bellsoft-jdk17.0.8.1+1-src.tar.gz"
+    source-sha256 = "91d759054a5ba8df95fdedf69acf3976189d1ca141858f5160954237dcb1a711"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.8.1+1/bellsoft-jdk17.0.8.1+1-linux-amd64.tar.gz"
     version = "17.0.8"
