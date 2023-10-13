@@ -238,6 +238,8 @@ api = "0.7"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@17.0.8?arch=amd64"
     sha256 = "d68c3f6f69e22dbf47a458b8f4a22e698473311dd71faf560c94ef44dde0ac71"
+    source = "https://github.com/bell-sw/Liberica/releases/download/17.0.8.1+1/bellsoft-jdk17.0.8.1+1-src.tar.gz"
+    source-sha256 = "91d759054a5ba8df95fdedf69acf3976189d1ca141858f5160954237dcb1a711"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.8.1+1/bellsoft-jre17.0.8.1+1-linux-amd64.tar.gz"
     version = "17.0.8"
