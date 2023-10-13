@@ -280,6 +280,8 @@ api = "0.7"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@21.0.0?arch=amd64"
     sha256 = "3f1a4f0cd60af82bdaf773f99fe5502da047b72a1593e7ddb668d0490c0a0779"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21+37/bellsoft-jdk21+37-src.tar.gz"
+    source-sha256 = "283f57e1b37b7eccc371a7edfc46d961cf568c50b308922b6447c716004fb705"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/21+37/bellsoft-jre21+37-linux-amd64.tar.gz"
     version = "21.0.0"
