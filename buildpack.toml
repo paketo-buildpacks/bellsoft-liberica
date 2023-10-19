@@ -171,16 +171,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:11.0.20:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:11.0.21:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@11.0.20?arch=amd64"
-    sha256 = "1c1fad2e6ef38603f73d1c37b7288dd135cd99d2d713ae02872637dd76c4aebd"
-    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.20.1+1/bellsoft-jdk11.0.20.1+1-src.tar.gz"
-    source-sha256 = "fbdea69d2b2cd619b9422e468e7324a3826e663c50df56f07dc84cb57aa12f1b"
+    purl = "pkg:generic/bellsoft-jdk@11.0.21?arch=amd64"
+    sha256 = "752113c1d7b20985b5a090e1ec1fb68204ad02b1061f21c3ad5e9a87a1fa40d2"
+    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.21+10/bellsoft-jdk11.0.21+10-src.tar.gz"
+    source-sha256 = "3f2f998725868c22f3f474710759d462a4e8c78183e7c01359ad0cff314fc74e"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.20.1+1/bellsoft-jdk11.0.20.1+1-linux-amd64.tar.gz"
-    version = "11.0.20"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.21+10/bellsoft-jdk11.0.21+10-linux-amd64.tar.gz"
+    version = "11.0.21"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
