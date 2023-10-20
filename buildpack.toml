@@ -145,7 +145,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-jdk@8.0.382?arch=amd64"
     sha256 = "4df319a91b11f342dd616fbbd0e76379c710b1b6ef904c9137ec38d8134842ce"
     source = "https://github.com/bell-sw/Liberica/releases/download/8u392+9/bellsoft-jdk8u392+9-src.tar.gz"
-    source-sha256 = "165f44027ea5dc02faa43fdab611b14ce335f820c579f148bf5754fa26d33648"
+    source-sha256 = "d0be2e70be6ffb58aa8a53577fdb1b9d9e67e16bb3d83feee5687395643c0d1b"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/8u392+9/bellsoft-jdk8u392+9-linux-amd64.tar.gz"
     version = "8.0.392"
