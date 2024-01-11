@@ -3,7 +3,7 @@ module github.com/paketo-buildpacks/bellsoft-liberica/v9
 go 1.20
 
 require (
-	github.com/paketo-buildpacks/libjvm v1.44.0
+	github.com/paketo-buildpacks/libjvm v1.44.1
 	github.com/paketo-buildpacks/libpak v1.68.0
 )
 
