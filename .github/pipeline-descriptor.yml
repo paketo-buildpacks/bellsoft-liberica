@@ -113,3 +113,109 @@ dependencies:
     product: liberica
     type:    jre
     version: "21"
+
+# ARM64
+- name:            JDK 8 ARM64
+  id:              jdk
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
+  cpe_pattern:     "update[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "8"
+    arch:    arm
+- name:            JRE 8 ARM64
+  id:              jre
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
+  cpe_pattern:     "update[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "8"
+    arch:    arm
+- name:            JDK 11 ARM64
+  id:              jdk
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "11"
+    arch:    arm
+- name:            JRE 11 ARM64
+  id:              jre
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "11"
+    arch:    arm
+- name:            Native Image 11 ARM64
+  id:              native-image-svm
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: nik
+    type:    core
+    version: "11"
+    arch:    arm
+- name:            Native Image 17 ARM64
+  id:              native-image-svm
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
+  with:
+    product: nik
+    type:    core
+    version: "17"
+    arch:    arm
+- name:            Native Image 21 ARM64
+  id:              native-image-svm
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
+  with:
+    product: nik
+    type:    core
+    version: "21"
+    arch:    arm
+- name:            JDK 17 ARM64
+  id:              jdk
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "17"
+    arch:    arm
+- name:            JRE 17 ARM64
+  id:              jre
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "17"
+    arch:    arm
+- name:            JDK 21 ARM64
+  id:              jdk
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "21"
+    arch:    arm
+- name:            JRE 21 ARM64
+  id:              jre
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "21"
+    arch:    arm
