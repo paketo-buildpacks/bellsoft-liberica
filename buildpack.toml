@@ -149,6 +149,7 @@ api = "0.7"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/8u402+7/bellsoft-jdk8u402+7-linux-amd64.tar.gz"
     version = "8.0.402"
+
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
@@ -302,11 +303,11 @@ api = "0.7"
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
     purl = "pkg:generic/bellsoft-nik@23.1.1?arch=amd64"
-    sha256 = "ba009a0101048179efb8f639c1cdf2597a8349d294567a8440a295f3e3427a85"
+    sha256 = "f0d05a442d49539ea909a4ab32664e53f3821586380d427fc16965c11e3ed4a9"
     source = "https://download.bell-sw.com/vm/23.1.1/bellsoft-liberica-vm-openjdk21.0.1+12-23.1.1+1-src.tar.gz"
     source-sha256 = "f7233c9e51057ba07b26214f848aa6da4052ad71d16a2eb78b68afaf75154fba"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/23.1.1/bellsoft-liberica-vm-core-openjdk21.0.1+12-23.1.1+1-linux-amd64.tar.gz"
+    uri = "https://download.bell-sw.com/vm/23.1.1/bellsoft-liberica-vm-core-openjdk21.0.1+12-23.1.1+1-linux-aarch64.tar.gz"
     version = "21.0.1"
 
     [[metadata.dependencies.licenses]]
