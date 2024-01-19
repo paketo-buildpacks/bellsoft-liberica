@@ -414,7 +414,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jre:17.0.9:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@17.0.9?arch=amd64"
+    purl = "pkg:generic/bellsoft-jre@17.0.9?arch=arm64"
     sha256 = "26987ce3b87eb629a14045de760f0aec8bafc1c0a0be9881b9e0dadd1ee1b08b"
     source = "https://github.com/bell-sw/Liberica/releases/download/17.0.9+11/bellsoft-jdk17.0.9+11-src.tar.gz"
     source-sha256 = "3bf0ba5c38c65270ad41d5c0ebba40bf396d9542e3cc40dce2085f5ef608e9b3"
