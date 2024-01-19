@@ -149,6 +149,7 @@ api = "0.7"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/8u402+7/bellsoft-jdk8u402+7-linux-amd64.tar.gz"
     version = "8.0.402"
+
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
@@ -286,11 +287,11 @@ api = "0.7"
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@21.0.2?arch=amd64"
-    sha256 = "1c89720b8735587b9c689130da9450ee2f7af01b6e1daccfa43ffe91a953ef0a"
+    sha256 = "720079459f021b9da8e5508eabd2a52e7473de3f5b2f173abd279bf3dabfdfb3"
     source = "https://github.com/bell-sw/Liberica/releases/download/21.0.2+14/bellsoft-jdk21.0.2+14-src.tar.gz"
     source-sha256 = "6ae6cbf51e7fd9887807e7a9f6addf85a038d7b26b5a2f3119ec1ebf52633dfa"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.2+14/bellsoft-jre21.0.2+14-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.2+14/bellsoft-jre21.0.2+14-linux-aarch64.tar.gz"
     version = "21.0.2"
 
     [[metadata.dependencies.licenses]]
