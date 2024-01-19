@@ -9,7 +9,7 @@ jobs:
         runs-on:
             - ubuntu-latest
         steps:
-            - uses: actions/setup-go@v4
+            - uses: actions/setup-go@v5
               with:
                 go-version: "1.20"
             - name: Install update-buildpack-dependency
@@ -35,12 +35,12 @@ jobs:
                   --show-error \
                   --silent \
                   --output "${HOME}"/bin/yj \
-                  "https://github.com/sclevine/yj/releases/download/v${YJ_VERSION}/yj-linux"
+                  "https://github.com/sclevine/yj/releases/download/v${YJ_VERSION}/yj-linux-amd64"
 
                 chmod +x "${HOME}"/bin/yj
               env:
-                YJ_VERSION: 5.0.0
-            - uses: actions/checkout@v3
+                YJ_VERSION: 5.1.0
+            - uses: actions/checkout@v4
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
               with:
@@ -60,6 +60,7 @@ jobs:
                 update-buildpack-dependency \
                   --buildpack-toml buildpack.toml \
                   --id "${ID}" \
+                  --arch "${ARCH}" \
                   --version-pattern "${VERSION_PATTERN}" \
                   --version "${VERSION}" \
                   --cpe-pattern "${CPE_PATTERN:-}" \
