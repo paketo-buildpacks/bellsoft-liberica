@@ -203,7 +203,7 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:graalvm:22.3.4:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:11.0.22:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:graalvm:22.3.4:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:11.0.21:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
     purl = "pkg:generic/bellsoft-nik@22.3.4?arch=amd64"
