@@ -304,10 +304,10 @@ api = "0.7"
     name = "BellSoft Liberica NIK"
     purl = "pkg:generic/bellsoft-nik@23.1.2?arch=amd64"
     sha256 = "2539fcddc1730312c1fbcd3b425eb00f91b48deba127b49318e55d0f40da498a"
-    source = "https://download.bell-sw.com/vm/23.1.2/bellsoft-liberica-vm-openjdk21.0.2+14-23.1.2+1-src.tar.gz"
+    source = "https://github.com/bell-sw/LibericaNIK/releases/download/23.1.2+1-21.0.2+14/bellsoft-liberica-vm-openjdk21.0.2+14-23.1.2+1-src.tar.gz"
     source-sha256 = "8c624197e739f131584d93905cdade37246e1e8e2484566851e3b22d9359e70a"
     stacks = ["io.buildpacks.stacks.bionic", "io.paketo.stacks.tiny", "*"]
-    uri = "https://download.bell-sw.com/vm/23.1.2/bellsoft-liberica-vm-core-openjdk21.0.2+14-23.1.2+1-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/23.1.2+1-21.0.2+14/bellsoft-liberica-vm-core-openjdk21.0.2+14-23.1.2+1-linux-amd64.tar.gz"
     version = "21.0.2"
 
     [[metadata.dependencies.licenses]]
