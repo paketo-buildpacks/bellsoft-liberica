@@ -84,6 +84,15 @@ dependencies:
     product: nik
     type:    core
     version: "21"
+- name:            Native Image 22
+  id:              native-image-svm
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
+  with:
+    product: nik
+    type:    standard
+    version: "22"
 - name:            JDK 17
   id:              jdk
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
@@ -116,6 +125,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "21"
+- name:            JDK 22
+  id:              jdk
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "22"
+- name:            JRE 22
+  id:              jre
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "22"
 
 # ARM64
 - name:            JDK 8 ARM64
@@ -186,6 +211,16 @@ dependencies:
     type:    core
     version: "21"
     arch:    arm64
+- name:            Native Image 22 ARM64
+  id:              native-image-svm
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
+  with:
+    product: nik
+    type:    standard
+    version: "22"
+    arch:    arm64
 - name:            JDK 17 ARM64
   id:              jdk
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
@@ -221,4 +256,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "21"
+    arch:    arm64
+- name:            JDK 22 ARM64
+  id:              jdk
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "22"
+    arch:    arm64
+- name:            JRE 22 ARM64
+  id:              jre
+  version_pattern: "22\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "22"
     arch:    arm64
