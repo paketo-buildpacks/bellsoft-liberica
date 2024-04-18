@@ -443,16 +443,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:21.0.2:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:21.0.3:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@21.0.2?arch=arm64"
-    sha256 = "f5c93cb2cab824dd29fde1bc30847475d952682ed05ea3b757fc1ec9f89c4f91"
-    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.2+14/bellsoft-jdk21.0.2+14-src.tar.gz"
-    source-sha256 = "6ae6cbf51e7fd9887807e7a9f6addf85a038d7b26b5a2f3119ec1ebf52633dfa"
+    purl = "pkg:generic/bellsoft-jdk@21.0.3?arch=arm64"
+    sha256 = "bdb5e4673257cca82816f588d342b46c1bfb34a64c1befa793ac748979e50f36"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+10/bellsoft-jdk21.0.3+10-src.tar.gz"
+    source-sha256 = "ad695dcfe2064258b82fa165464b867e3c2a30ae1fc7f2102f59fce6cd790a43"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.2+14/bellsoft-jdk21.0.2+14-linux-aarch64.tar.gz"
-    version = "21.0.2"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+10/bellsoft-jdk21.0.3+10-linux-aarch64.tar.gz"
+    version = "21.0.3"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
