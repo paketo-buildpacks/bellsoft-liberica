@@ -511,11 +511,11 @@ api = "0.7"
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@21.0.3?arch=arm64"
-    sha256 = "a1d2b7dfdb81b80bf11a07a2b6ec4175fcfdef004de3f69f6baf6c72fb6e8871"
-    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+10/bellsoft-jdk21.0.3+10-src.tar.gz"
-    source-sha256 = "ad695dcfe2064258b82fa165464b867e3c2a30ae1fc7f2102f59fce6cd790a43"
+    sha256 = "4d25ef461a156694dfbff29e6526e1bd52a0d22fcc77cead643954f42d88d1cb"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+12/bellsoft-jdk21.0.3+12-src.tar.gz"
+    source-sha256 = "2ab89f6ff1c0e65d2e35c48a7174cf27eae6d9824bf62cc6de2f5dbd08ae12cd"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+10/bellsoft-jre21.0.3+10-linux-aarch64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.3+12/bellsoft-jre21.0.3+12-linux-aarch64.tar.gz"
     version = "21.0.3"
 
     [[metadata.dependencies.licenses]]
