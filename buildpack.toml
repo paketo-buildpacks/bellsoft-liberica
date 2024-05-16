@@ -257,7 +257,7 @@ api = "0.7"
     purl = "pkg:generic/bellsoft-nik@23.0.4?arch=amd64"
     sha256 = "a10ce115f831ced704dae49fd75b1e7d155cc0e5f46cddb3fb4081c859d6d594"
     source = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.4+1-17.0.11+10/bellsoft-liberica-vm-openjdk17.0.11+10-23.0.4+1-src.tar.gz"
-    source-sha256 = "907cc89604efadfb2a88abd56dd1cfc6756976d5143d238d2a0f0229de34f04d"
+    source-sha256 = "da7e1339ae123e1eba7754144d45af6666c5a587a2dcf2c1c62b7f4d3e94f130"
     stacks = ["*"]
     uri = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.4+1-17.0.11+10/bellsoft-liberica-vm-core-openjdk17.0.11+10-23.0.4+1-linux-amd64.tar.gz"
     version = "17.0.11"
