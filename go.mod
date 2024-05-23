@@ -1,6 +1,6 @@
 module github.com/paketo-buildpacks/bellsoft-liberica/v9
 
-go 1.20
+go 1.22
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.44.4
