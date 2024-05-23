@@ -3,12 +3,12 @@ module github.com/paketo-buildpacks/bellsoft-liberica/v9
 go 1.22
 
 require (
-	github.com/paketo-buildpacks/libjvm v1.44.4
+	github.com/paketo-buildpacks/libjvm v1.45.0
 	github.com/paketo-buildpacks/libpak v1.70.0
 )
 
 require (
-	github.com/BurntSushi/toml v1.3.2 // indirect
+	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/Masterminds/semver/v3 v3.2.1 // indirect
 	github.com/buildpacks/libcnb v1.30.3 // indirect
 	github.com/creack/pty v1.1.21 // indirect
