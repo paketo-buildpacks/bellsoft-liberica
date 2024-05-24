@@ -36,8 +36,7 @@ jobs:
 
                 mkdir -p "${HOME}"/bin
                 echo "${HOME}/bin" >> "${GITHUB_PATH}"
-                (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.34.0-rc1/pack-v0.34.0-rc1-linux.tgz" | sudo tar -C ${HOME}/bin/ --no-same-owner -xzv pack)
-                chmod +x "${HOME}"/bin/pack
+                (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.34.0-rc1/pack-v0.34.0-rc1-linux.tgz" | tar -C ${HOME}/bin/ -xzv pack)
             - name: Enable pack Experimental
               if: ${{ false }}
               run: |
