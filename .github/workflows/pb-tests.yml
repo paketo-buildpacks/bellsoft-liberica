@@ -175,9 +175,9 @@ jobs:
                 fi
               env:
                 FORMAT: image
-                PACKAGES: test
-                TTL_SH_PUBLISH: "false"
-                VERSION: ${{ steps.version.outputs.version }}
+                PACKAGES: ttl.sh/test-${{ steps.version.outputs.version }}
+                TTL_SH_PUBLISH: "true"
+                VERSION: 8h
     unit:
         name: Unit Test
         runs-on:
