@@ -158,7 +158,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update422:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@8.0.402?arch=amd64"
+    purl = "pkg:generic/bellsoft-jre@8.0.422?arch=amd64"
     sha256 = "3d25e3d4a8a1f34424f7f547f30fe35453066c41d6f1cc4c20c3e6dcaca1b8e3"
     source = "https://github.com/bell-sw/Liberica/releases/download/8u422+6/bellsoft-jdk8u422+6-src.tar.gz"
     source-sha256 = "51fdc490990f46861d7a006f204d1f37928f521d95b2e34e4cfa262d7c3f4bae"
