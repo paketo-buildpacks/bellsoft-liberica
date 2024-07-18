@@ -555,16 +555,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:22.0.1:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:22.0.2:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@22.0.1?arch=arm64"
-    sha256 = "9f8646b1df16cf2012b7692d778d2cee73302cccae2f21a668834b193c780073"
-    source = "https://github.com/bell-sw/Liberica/releases/download/22.0.1+12/bellsoft-jdk22.0.1+12-src.tar.gz"
-    source-sha256 = "ef63c01782884656ccef837201ae112e5beadfeb90719acb941f32da25145163"
+    purl = "pkg:generic/bellsoft-jre@22.0.2?arch=arm64"
+    sha256 = "8b574339fd8277875d5f26ec6566eb55964eb11008215e028d09da73049db4c8"
+    source = "https://github.com/bell-sw/Liberica/releases/download/22.0.2+11/bellsoft-jdk22.0.2+11-src.tar.gz"
+    source-sha256 = "015d153512f85547db4476f642c7714cc2abba2c61a7368782ffd28eef857ce6"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/22.0.1+12/bellsoft-jre22.0.1+12-linux-aarch64.tar.gz"
-    version = "22.0.1"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/22.0.2+11/bellsoft-jre22.0.2+11-linux-aarch64.tar.gz"
+    version = "22.0.2"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
