@@ -475,16 +475,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:graalvm:22.3.4:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:17.0.11:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:graalvm:22.3.4:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:17.0.12:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
-    purl = "pkg:generic/bellsoft-nik@23.0.4?arch=arm64"
-    sha256 = "5b8ccf52f2e712198f684898e3699374efec2d88bcdc22329725f7d9a49a211a"
-    source = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.4+1-17.0.11+10/bellsoft-liberica-vm-openjdk17.0.11+10-23.0.4+1-src.tar.gz"
-    source-sha256 = "da7e1339ae123e1eba7754144d45af6666c5a587a2dcf2c1c62b7f4d3e94f130"
+    purl = "pkg:generic/bellsoft-nik@23.0.5?arch=arm64"
+    sha256 = "e0581164b70f51b96c90b4a57941cbffea92387226e2468339be0aa0269e0fa4"
+    source = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.5+1-17.0.12+10/bellsoft-liberica-vm-openjdk17.0.12+10-23.0.5+1-src.tar.gz"
+    source-sha256 = "0a7cfc6552a8a061ab65186710e3988927f99645a0d66a53aa8d3f0bdc8a86e7"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.4+1-17.0.11+10/bellsoft-liberica-vm-core-openjdk17.0.11+10-23.0.4+1-linux-aarch64.tar.gz"
-    version = "17.0.11"
+    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/23.0.5+1-17.0.12+10/bellsoft-liberica-vm-core-openjdk17.0.12+10-23.0.5+1-linux-aarch64.tar.gz"
+    version = "17.0.12"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
