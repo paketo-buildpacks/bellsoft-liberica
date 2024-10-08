@@ -123,7 +123,7 @@ api = "0.7"
 
   [[metadata.configurations]]
     build = true
-    default = "17"
+    default = "21"
     description = "the Java version"
     name = "BP_JVM_VERSION"
 
