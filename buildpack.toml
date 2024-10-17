@@ -139,16 +139,16 @@ api = "0.7"
     name = "JAVA_TOOL_OPTIONS"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update422:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update432:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@8.0.422?arch=amd64"
-    sha256 = "b7bd03111261047c23f9538cf3ffb7fd74d6622ed94ec08c0662a9592e6f1f9e"
-    source = "https://github.com/bell-sw/Liberica/releases/download/8u422+6/bellsoft-jdk8u422+6-src.tar.gz"
-    source-sha256 = "51fdc490990f46861d7a006f204d1f37928f521d95b2e34e4cfa262d7c3f4bae"
+    sha256 = "d16b7a89aeedf297fab1bdd74104badbf5421ae62c67e7c70285d26a4420f3d2"
+    source = "https://github.com/bell-sw/Liberica/releases/download/8u432+7/bellsoft-jdk8u432+7-src.tar.gz"
+    source-sha256 = "3893d0963e52c8d08d3bc426ea3c42ae45cf7b5dac19986ab5581c00d162f62a"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u422+6/bellsoft-jdk8u422+6-linux-amd64.tar.gz"
-    version = "8.0.422"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u432+7/bellsoft-jdk8u432+7-linux-amd64.tar.gz"
+    version = "8.0.432"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
