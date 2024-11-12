@@ -35,8 +35,8 @@ github.com/mitchellh/hashstructure/v2 v2.0.2 h1:vGKWl0YJqUNxE8d+h8f6NJLcCJrgbhC4
 github.com/mitchellh/hashstructure/v2 v2.0.2/go.mod h1:MG3aRVU/N29oo/V/IhBX8GR/zz4kQkprJgF2EVszyDE=
 github.com/onsi/gomega v1.35.1 h1:Cwbd75ZBPxFSuZ6T+rN/WCb/gOc6YgFBXLlZLhC7Ds4=
 github.com/onsi/gomega v1.35.1/go.mod h1:PvZbdDc8J6XJEpDK4HCuRBm8a6Fzp9/DmhC9C7yFlog=
-github.com/paketo-buildpacks/libjvm v1.45.0 h1:j6uPzw6NqLKQhtD/0mNSHWaDdNqoNvNkpYEP15eotcE=
-github.com/paketo-buildpacks/libjvm v1.45.0/go.mod h1:WqnhqdGlfnMOiSQhDKeloWAUvdlKWBrrG4cmhT8yJjE=
+github.com/paketo-buildpacks/libjvm v1.46.0 h1:+mEOsK30a1if0T3ZvSs6di/w5cp/j14uD3DyYUusavI=
+github.com/paketo-buildpacks/libjvm v1.46.0/go.mod h1:jNQuS8SQfbbHN9kenMpBhpxaE0uCa9ZkKLrN89IU0VY=
 github.com/paketo-buildpacks/libpak v1.72.0 h1:is/JJzMM7vJSI/RghROSj1qZJPtkTSKfOlsceTNeEhw=
 github.com/paketo-buildpacks/libpak v1.72.0/go.mod h1:LHep340UxOKfCZuyT9Fho5HSStkE1iWt7+P52KhAm0Y=
 github.com/pavlo-v-chernykh/keystore-go/v4 v4.5.0 h1:2nosf3P75OZv2/ZO/9Px5ZgZ5gbKrzA3joN1QMfOGMQ=
