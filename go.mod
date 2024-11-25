@@ -9,7 +9,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.4.0 // indirect
-	github.com/Masterminds/semver/v3 v3.3.0 // indirect
+	github.com/Masterminds/semver/v3 v3.3.1 // indirect
 	github.com/buildpacks/libcnb v1.30.4 // indirect
 	github.com/creack/pty v1.1.24 // indirect
 	github.com/h2non/filetype v1.1.3 // indirect
