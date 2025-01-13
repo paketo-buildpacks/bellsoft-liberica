@@ -16,7 +16,7 @@ require (
 	github.com/heroku/color v0.0.6 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/magiconair/properties v1.8.9 // indirect
-	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-shellwords v1.0.12 // indirect
 	github.com/miekg/dns v1.1.62 // indirect
@@ -24,11 +24,11 @@ require (
 	github.com/onsi/gomega v1.36.2 // indirect
 	github.com/pavlo-v-chernykh/keystore-go/v4 v4.5.0 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
-	golang.org/x/crypto v0.31.0 // indirect
+	golang.org/x/crypto v0.32.0 // indirect
 	golang.org/x/mod v0.22.0 // indirect
-	golang.org/x/net v0.33.0 // indirect
+	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.29.0 // indirect
-	golang.org/x/tools v0.28.0 // indirect
+	golang.org/x/tools v0.29.0 // indirect
 	software.sslmate.com/src/go-pkcs12 v0.5.0 // indirect
 )
