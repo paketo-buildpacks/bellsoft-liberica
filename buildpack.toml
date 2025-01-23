@@ -187,16 +187,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jre:11.0.25:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jre:11.0.26:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@11.0.25?arch=amd64"
-    sha256 = "39b84c75331d726c31e7e55bc25687f8d8f59346a820a0661ff394caadc5ad6b"
-    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.25+11/bellsoft-jdk11.0.25+11-src.tar.gz"
-    source-sha256 = "15b062af8d50e7996e6d44a027f039cefbb0b8e2f81aa1984661118366e6e788"
+    purl = "pkg:generic/bellsoft-jre@11.0.26?arch=amd64"
+    sha256 = "8e3419eaf8fe8dc926a9ba52301c9c50b378fdba20560490e7c569a53b7a6f9a"
+    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.26+9/bellsoft-jdk11.0.26+9-src.tar.gz"
+    source-sha256 = "ebddf4499a6225f04f32be72f53d767a8ab48682d137bc4ee794bd89998d1bda"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.25+11/bellsoft-jre11.0.25+11-linux-amd64.tar.gz"
-    version = "11.0.25"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.26+9/bellsoft-jre11.0.26+9-linux-amd64.tar.gz"
+    version = "11.0.26"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
