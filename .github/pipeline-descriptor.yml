@@ -84,15 +84,15 @@ dependencies:
     product: nik
     type:    core
     version: "21"
-- name:            Native Image 23
+- name:            Native Image 24
   id:              native-image-svm
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
   with:
     product: nik
     type:    standard
-    version: "23"
+    version: "24"
 - name:            JDK 17
   id:              jdk
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
@@ -125,22 +125,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "21"
-- name:            JDK 23
+- name:            JDK 24
   id:              jdk
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jdk
-    version: "23"
-- name:            JRE 23
+    version: "24"
+- name:            JRE 24
   id:              jre
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jre
-    version: "23"
+    version: "24"
 
 # ARM64
 - name:            JDK 8 ARM64
@@ -211,15 +211,15 @@ dependencies:
     type:    core
     version: "21"
     arch:    arm64
-- name:            Native Image 23 ARM64
+- name:            Native Image 24 ARM64
   id:              native-image-svm
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
   with:
     product: nik
     type:    standard
-    version: "23"
+    version: "24"
     arch:    arm64
 - name:            JDK 17 ARM64
   id:              jdk
@@ -257,21 +257,21 @@ dependencies:
     type:    jre
     version: "21"
     arch:    arm64
-- name:            JDK 23 ARM64
+- name:            JDK 24 ARM64
   id:              jdk
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jdk
-    version: "23"
+    version: "24"
     arch:    arm64
-- name:            JRE 23 ARM64
+- name:            JRE 24 ARM64
   id:              jre
-  version_pattern: "23\\.[\\d]+\\.[\\d]+"
+  version_pattern: "24\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jre
-    version: "23"
+    version: "24"
     arch:    arm64
