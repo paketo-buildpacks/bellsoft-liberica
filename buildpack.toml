@@ -558,7 +558,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jre:24.0.0:*:*:*:*:*:*:*"]
     id = "jre"
     name = "BellSoft Liberica JRE"
-    purl = "pkg:generic/bellsoft-jre@24.0.20?arch=arm64"
+    purl = "pkg:generic/bellsoft-jre@24.0.0?arch=arm64"
     sha256 = "c34843cbc44d49c73b581bcb80864fd1ab0a38d1bcd828367fed68a8fe728e1a"
     source = "https://github.com/bell-sw/Liberica/releases/download/24+37/bellsoft-jdk24+37-src.tar.gz"
     source-sha256 = "0d11903422230d73a64365db9b3c6b95124775bf1f265699d5aa254f6ac02ad0"
