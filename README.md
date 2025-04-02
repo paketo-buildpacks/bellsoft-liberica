@@ -1,4 +1,7 @@
-# `gcr.io/paketo-buildpacks/bellsoft-liberica`
+# Paketo Buildpack for Bellsoft Liberica
+
+## Buildpack ID: `paketo-buildpacks/bellsoft-liberica`
+## Registry URLs: `docker.io/paketobuildpacks/bellsoft-liberica`
 
 The Paketo Buildpack for BellSoft Liberica is a Cloud Native Buildpack that provides the BellSoft Liberica implementations of JREs and JDKs.
 
