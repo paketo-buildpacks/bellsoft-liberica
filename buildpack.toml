@@ -366,7 +366,7 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update462:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@8.0.422?arch=arm64"
+    purl = "pkg:generic/bellsoft-jdk@8.0.462?arch=arm64"
     sha256 = "c53cdc4a24102d326d6e89b69426ee13c53baecbb0746a14c35ec0d819a8f415"
     source = "https://github.com/bell-sw/Liberica/releases/download/8u462+11/bellsoft-jdk8u462+11-src.tar.gz"
     source-sha256 = "08ba48ebb58fd2f2e00b3c4cd97114c1ea173f5a678fa4c18327138b57cff004"
