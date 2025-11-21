@@ -2,7 +2,7 @@ module github.com/paketo-buildpacks/bellsoft-liberica/v9
 
 go 1.24.0
 
-toolchain go1.24.9
+toolchain go1.24.10
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.46.0
@@ -26,11 +26,11 @@ require (
 	github.com/onsi/gomega v1.38.2 // indirect
 	github.com/pavlo-v-chernykh/keystore-go/v4 v4.5.0 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
-	golang.org/x/crypto v0.43.0 // indirect
-	golang.org/x/mod v0.29.0 // indirect
-	golang.org/x/net v0.46.0 // indirect
-	golang.org/x/sync v0.17.0 // indirect
-	golang.org/x/sys v0.37.0 // indirect
-	golang.org/x/tools v0.38.0 // indirect
+	golang.org/x/crypto v0.44.0 // indirect
+	golang.org/x/mod v0.30.0 // indirect
+	golang.org/x/net v0.47.0 // indirect
+	golang.org/x/sync v0.18.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
+	golang.org/x/tools v0.39.0 // indirect
 	software.sslmate.com/src/go-pkcs12 v0.6.0 // indirect
 )
