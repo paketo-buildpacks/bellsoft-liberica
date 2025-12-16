@@ -303,11 +303,11 @@ api = "0.7"
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
     purl = "pkg:generic/bellsoft-nik@25.0.1?arch=amd64"
-    sha256 = "b35faac760c7206c851cc084f203fdefd117978efe894d70bf874ddc6c11b323"
-    source = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.1+2-25.0.1+14/bellsoft-liberica-vm-openjdk25.0.1+14-25.0.1+2-src.tar.gz"
-    source-sha256 = "b5cc193dc9843576c0a62eead5152a4549def19699c6e5aba3003f3d8134065e"
+    sha256 = "be2ce7df7cb2c27d318aa94e58962f0105131759fcc933c62a48f087100db93a"
+    source = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.1+3-25.0.1+16/bellsoft-liberica-vm-openjdk25.0.1+16-25.0.1+3-src.tar.gz"
+    source-sha256 = "75543ef494c06a520cfa0c20a96ff6d2a2a852541c1949dee21d58d533578301"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.1+2-25.0.1+14/bellsoft-liberica-vm-openjdk25.0.1+14-25.0.1+2-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.1+3-25.0.1+16/bellsoft-liberica-vm-openjdk25.0.1+16-25.0.1+3-linux-amd64.tar.gz"
     version = "25.0.1"
 
     [[metadata.dependencies.licenses]]
