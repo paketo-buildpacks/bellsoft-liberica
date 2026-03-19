@@ -378,7 +378,6 @@ api = "0.7"
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
-
   [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:graalvm:23.1.1:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:21.0.10:*:*:*:*:*:*:*"]
     id = "native-image-svm"
@@ -650,7 +649,6 @@ api = "0.7"
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
-
 
 [[stacks]]
   id = "*"
