@@ -138,6 +138,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "25"
+- name:            JDK 26
+  id:              jdk
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "26"
+- name:            JRE 26
+  id:              jre
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "26"
 
 # ARM64
 - name:            JDK 8 ARM64
@@ -271,4 +287,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "25"
+    arch:    arm64
+- name:            JDK 26 ARM64
+  id:              jdk
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "26"
+    arch:    arm64
+- name:            JRE 26 ARM64
+  id:              jre
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "26"
     arch:    arm64
