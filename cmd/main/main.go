@@ -19,13 +19,20 @@ package main
 import (
 	"github.com/paketo-buildpacks/libjvm"
 	"github.com/paketo-buildpacks/libjvm/helper"
+	"fmt"
 	"os"
+	"runtime"
 
 	"github.com/paketo-buildpacks/libpak"
 	"github.com/paketo-buildpacks/libpak/bard"
 )
 
 func main() {
+	if runtime.GOARCH == "s390x" {
+		fmt.Fprintf(os.Stderr, "BellSoft Liberica does not support the s390x architecture. Please use a different JVM vendor.\n")
+		os.Exit(1)
+	}
+
 	logger := bard.NewLogger(os.Stdout)
 
 	// not used directly, but this forces the helper module to be included in the module

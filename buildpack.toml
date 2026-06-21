@@ -660,3 +660,11 @@ api = "0.7"
 [[targets]]
   arch = "arm64"
   os = "linux"
+
+[[targets]]
+  arch = "ppc64le"
+  os = "linux"
+
+[[targets]]
+  arch = "s390x"
+  os = "linux"
