@@ -28,6 +28,8 @@ import (
 )
 
 func main() {
+    // exit early for unsupported architecture
+    // exit code 1 is important as it matches the spec, https://github.com/buildpacks/libcnb/blob/main/internal/exit_handler.go#L27
 	if runtime.GOARCH == "s390x" {
 		fmt.Fprintf(os.Stderr, "BellSoft Liberica does not support the s390x architecture. Please use a different JVM vendor.\n")
 		os.Exit(1)
