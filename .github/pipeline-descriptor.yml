@@ -346,46 +346,6 @@ dependencies:
     type:    jre
     version: "11"
     arch:    ppc64le
-- name:            Native Image 11 PPC64LE
-  id:              native-image-svm
-  version_pattern: "11\\.[\\d]+\\.[\\d]+"
-  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  with:
-    product: nik
-    type:    core
-    version: "11"
-    arch:    ppc64le
-- name:            Native Image 17 PPC64LE
-  id:              native-image-svm
-  version_pattern: "17\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
-  with:
-    product: nik
-    type:    core
-    version: "17"
-    arch:    ppc64le
-- name:            Native Image 21 PPC64LE
-  id:              native-image-svm
-  version_pattern: "21\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
-  with:
-    product: nik
-    type:    core
-    version: "21"
-    arch:    ppc64le
-- name:            Native Image 25 PPC64LE
-  id:              native-image-svm
-  version_pattern: "25\\.[\\d]+\\.[\\d]+"
-  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
-  purl_pattern:    "[\\d]+\\.[\\d]+\\.[\\d]+\\.?[\\d]?"
-  with:
-    product: nik
-    type:    standard
-    version: "25"
-    arch:    ppc64le
 - name:            JDK 17 PPC64LE
   id:              jdk
   version_pattern: "17\\.[\\d]+\\.[\\d]+"
