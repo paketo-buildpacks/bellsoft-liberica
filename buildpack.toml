@@ -650,6 +650,198 @@ api = "0.7"
       type = "GPL-2.0 WITH Classpath-exception-2.0"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update492:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@8.0.492?arch=ppc64le"
+    sha256 = "02cd6d44584752e537531f5bcec9c83f6a2fd8e030bf9dda937d043107d54d87"
+    source = "https://github.com/bell-sw/Liberica/releases/download/8u492+9/bellsoft-jdk8u492+9-src.tar.gz"
+    source-sha256 = "02cd6d44584752e537531f5bcec9c83f6a2fd8e030bf9dda937d043107d54d87"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u492+9/bellsoft-jdk8u492+9-linux-ppc64le.tar.gz"
+    version = "8.0.492"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:1.8.0:update492:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@8.0.492?arch=ppc64le"
+    sha256 = "8711e7dc55242652deee45f10ba87184e7975717987472bd090cb032da4c6f18"
+    source = "https://github.com/bell-sw/Liberica/releases/download/8u492+9/bellsoft-jdk8u492+9-src.tar.gz"
+    source-sha256 = "8711e7dc55242652deee45f10ba87184e7975717987472bd090cb032da4c6f18"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u492+9/bellsoft-jre8u492+9-linux-ppc64le.tar.gz"
+    version = "8.0.492"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:11.0.31:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@11.0.31?arch=ppc64le"
+    sha256 = "f165206f8248a6265aa8165256b2c6b2f6ca2b4e54a0660d61c74882cf8e3006"
+    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.31+11/bellsoft-jdk11.0.31+11-src.tar.gz"
+    source-sha256 = "f165206f8248a6265aa8165256b2c6b2f6ca2b4e54a0660d61c74882cf8e3006"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.31+11/bellsoft-jdk11.0.31+11-linux-ppc64le.tar.gz"
+    version = "11.0.31"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:11.0.31:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@11.0.31?arch=ppc64le"
+    sha256 = "d84c7b7ae54034ecbcd5710cb90c3f9423b1044bd8aa55f999a7b45c2e27ced3"
+    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.31+11/bellsoft-jdk11.0.31+11-src.tar.gz"
+    source-sha256 = "d84c7b7ae54034ecbcd5710cb90c3f9423b1044bd8aa55f999a7b45c2e27ced3"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.31+11/bellsoft-jre11.0.31+11-linux-ppc64le.tar.gz"
+    version = "11.0.31"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:17.0.19:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@17.0.19?arch=ppc64le"
+    sha256 = "d8fcdacf1c90be9877dc0d81a9f369e759c4a203c28f0ddf666f85975f41fa06"
+    source = "https://github.com/bell-sw/Liberica/releases/download/17.0.19+11/bellsoft-jdk17.0.19+11-src.tar.gz"
+    source-sha256 = "d8fcdacf1c90be9877dc0d81a9f369e759c4a203c28f0ddf666f85975f41fa06"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.19+11/bellsoft-jdk17.0.19+11-linux-ppc64le.tar.gz"
+    version = "17.0.19"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:17.0.19:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@17.0.19?arch=ppc64le"
+    sha256 = "247ca946a50b15ecd99364fffe49cbef86f3481109a109fa4e854331b9d070ab"
+    source = "https://github.com/bell-sw/Liberica/releases/download/17.0.19+11/bellsoft-jdk17.0.19+11-src.tar.gz"
+    source-sha256 = "247ca946a50b15ecd99364fffe49cbef86f3481109a109fa4e854331b9d070ab"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/17.0.19+11/bellsoft-jre17.0.19+11-linux-ppc64le.tar.gz"
+    version = "17.0.19"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:21.0.11:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@21.0.11?arch=ppc64le"
+    sha256 = "b3d605a46ed9738d3cb55205da74eff03ae20dfb425f7975ac9885d196632df1"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.11+11/bellsoft-jdk21.0.11+11-src.tar.gz"
+    source-sha256 = "b3d605a46ed9738d3cb55205da74eff03ae20dfb425f7975ac9885d196632df1"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.11+11/bellsoft-jdk21.0.11+11-linux-ppc64le.tar.gz"
+    version = "21.0.11"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:21.0.11:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@21.0.11?arch=ppc64le"
+    sha256 = "2ee54a625c3b579765307026452c34ea6121678fe1f1c281dceef5a128ca36ae"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.11+11/bellsoft-jdk21.0.11+11-src.tar.gz"
+    source-sha256 = "2ee54a625c3b579765307026452c34ea6121678fe1f1c281dceef5a128ca36ae"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.11+11/bellsoft-jre21.0.11+11-linux-ppc64le.tar.gz"
+    version = "21.0.11"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:25.0.3:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@25.0.3?arch=ppc64le"
+    sha256 = "8e8645e9a8f300a69d509a1232ffea42ec45deaed380215f8a067f5dd8958f40"
+    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jdk25.0.3+11-src.tar.gz"
+    source-sha256 = "8e8645e9a8f300a69d509a1232ffea42ec45deaed380215f8a067f5dd8958f40"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jdk25.0.3+11-linux-ppc64le.tar.gz"
+    version = "25.0.3"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:25.0.3:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@25.0.3?arch=ppc64le"
+    sha256 = "530a1d9a433b32b867769d08f7b18d157e92f8c7e0b2a4a5707a41c67cacc0e3"
+    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jdk25.0.3+11-src.tar.gz"
+    source-sha256 = "530a1d9a433b32b867769d08f7b18d157e92f8c7e0b2a4a5707a41c67cacc0e3"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jre25.0.3+11-linux-ppc64le.tar.gz"
+    version = "25.0.3"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:26.0.1:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@26.0.1?arch=ppc64le"
+    sha256 = "62f589c773caf1a6952c5a7e55e1d36d18473ca922e5e1bd0de599136654dbe5"
+    source = "https://github.com/bell-sw/Liberica/releases/download/26.0.1+10/bellsoft-jdk26.0.1+10-src.tar.gz"
+    source-sha256 = "62f589c773caf1a6952c5a7e55e1d36d18473ca922e5e1bd0de599136654dbe5"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/26.0.1+10/bellsoft-jdk26.0.1+10-linux-ppc64le.tar.gz"
+    version = "26.0.1"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:26.0.1:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@26.0.1?arch=ppc64le"
+    sha256 = "b5c70670a1295b88b7fbdb173e40e16554a26bb271c421118da8ed44d915f708"
+    source = "https://github.com/bell-sw/Liberica/releases/download/26.0.1+10/bellsoft-jdk26.0.1+10-src.tar.gz"
+    source-sha256 = "b5c70670a1295b88b7fbdb173e40e16554a26bb271c421118da8ed44d915f708"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/26.0.1+10/bellsoft-jre26.0.1+10-linux-ppc64le.tar.gz"
+    version = "26.0.1"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
 [[stacks]]
   id = "*"
 
@@ -659,4 +851,12 @@ api = "0.7"
 
 [[targets]]
   arch = "arm64"
+  os = "linux"
+
+[[targets]]
+  arch = "ppc64le"
+  os = "linux"
+
+[[targets]]
+  arch = "s390x"
   os = "linux"
