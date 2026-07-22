@@ -306,3 +306,115 @@ dependencies:
     type:    jre
     version: "26"
     arch:    arm64
+
+# PPC64LE
+- name:            JDK 8 PPC64LE
+  id:              jdk
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
+  cpe_pattern:     "update[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "8"
+    arch:    ppc64le
+- name:            JRE 8 PPC64LE
+  id:              jre
+  version_pattern: "^8\\.[\\d]+\\.[\\d]+"
+  cpe_pattern:     "update[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "8"
+    arch:    ppc64le
+- name:            JDK 11 PPC64LE
+  id:              jdk
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "11"
+    arch:    ppc64le
+- name:            JRE 11 PPC64LE
+  id:              jre
+  version_pattern: "11\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "11"
+    arch:    ppc64le
+- name:            JDK 17 PPC64LE
+  id:              jdk
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "17"
+    arch:    ppc64le
+- name:            JRE 17 PPC64LE
+  id:              jre
+  version_pattern: "17\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "17"
+    arch:    ppc64le
+- name:            JDK 21 PPC64LE
+  id:              jdk
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "21"
+    arch:    ppc64le
+- name:            JRE 21 PPC64LE
+  id:              jre
+  version_pattern: "21\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "21"
+    arch:    ppc64le
+- name:            JDK 25 PPC64LE
+  id:              jdk
+  version_pattern: "25\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "25"
+    arch:    ppc64le
+- name:            JRE 25 PPC64LE
+  id:              jre
+  version_pattern: "25\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "25"
+    arch:    ppc64le
+- name:            JDK 26 PPC64LE
+  id:              jdk
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "26"
+    arch:    ppc64le
+- name:            JRE 26 PPC64LE
+  id:              jre
+  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "26"
+    arch:    ppc64le
