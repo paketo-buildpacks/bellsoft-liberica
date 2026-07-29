@@ -4,20 +4,27 @@ set -euo pipefail
 GOMOD=$(head -1 go.mod | awk '{print $2}')
 GOOS="linux" GOARCH="amd64" go build -ldflags='-s -w' -o "linux/amd64/bin/helper" "github.com/paketo-buildpacks/libjvm/cmd/helper"
 GOOS="linux" GOARCH="arm64" go build -ldflags='-s -w' -o "linux/arm64/bin/helper" "github.com/paketo-buildpacks/libjvm/cmd/helper"
-GOOS="linux" GOARCH="amd64" go build -ldflags='-s -w' -o linux/amd64/bin/main "$GOMOD/cmd/main"
-GOOS="linux" GOARCH="arm64" go build -ldflags='-s -w' -o linux/arm64/bin/main "$GOMOD/cmd/main"
+GOOS="linux" GOARCH="ppc64le" go build -ldflags='-s -w' -o "linux/ppc64le/bin/helper" "github.com/paketo-buildpacks/libjvm/cmd/helper"
+GOOS="linux" GOARCH="s390x" go build -ldflags='-s -w' -o "linux/s390x/bin/helper" "github.com/paketo-buildpacks/libjvm/cmd/helper"
+GOOS="linux" GOARCH="amd64" go build -ldflags='-s -w' -o "linux/amd64/bin/main" "$GOMOD/cmd/main"
+GOOS="linux" GOARCH="arm64" go build -ldflags='-s -w' -o "linux/arm64/bin/main" "$GOMOD/cmd/main"
+GOOS="linux" GOARCH="ppc64le" go build -ldflags='-s -w' -o "linux/ppc64le/bin/main" "$GOMOD/cmd/main"
+GOOS="linux" GOARCH="s390x" go build -ldflags='-s -w' -o "linux/s390x/bin/main" "$GOMOD/cmd/main"
 
 if [ "${STRIP:-false}" != "false" ]; then
-  strip linux/amd64/bin/helper linux/arm64/bin/helper
-  strip linux/amd64/bin/main linux/arm64/bin/main
+  strip linux/amd64/bin/helper linux/arm64/bin/helper linux/ppc64le/bin/helper linux/s390x/bin/helper
+  strip linux/amd64/bin/main linux/arm64/bin/main linux/ppc64le/bin/main linux/s390x/bin/main
 fi
 
 if [ "${COMPRESS:-none}" != "none" ]; then
-  $COMPRESS linux/amd64/bin/helper linux/arm64/bin/helper
-  $COMPRESS linux/amd64/bin/main linux/arm64/bin/main
+  $COMPRESS linux/amd64/bin/helper linux/arm64/bin/helper linux/ppc64le/bin/helper linux/s390x/bin/helper
+  $COMPRESS linux/amd64/bin/main linux/arm64/bin/main linux/ppc64le/bin/main linux/s390x/bin/main
 fi
-
 ln -fs main linux/amd64/bin/build
-ln -fs main linux/arm64/bin/build
 ln -fs main linux/amd64/bin/detect
+ln -fs main linux/arm64/bin/build
 ln -fs main linux/arm64/bin/detect
+ln -fs main linux/ppc64le/bin/build
+ln -fs main linux/ppc64le/bin/detect
+ln -fs main linux/s390x/bin/build
+ln -fs main linux/s390x/bin/detect
