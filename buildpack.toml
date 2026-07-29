@@ -779,16 +779,16 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
-    cpes = ["cpe:2.3:a:oracle:jdk:25.0.3:*:*:*:*:*:*:*"]
+    cpes = ["cpe:2.3:a:oracle:jdk:25.0.4:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
-    purl = "pkg:generic/bellsoft-jdk@25.0.3?arch=ppc64le"
-    sha256 = "8e8645e9a8f300a69d509a1232ffea42ec45deaed380215f8a067f5dd8958f40"
-    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jdk25.0.3+11-src.tar.gz"
-    source-sha256 = "8e8645e9a8f300a69d509a1232ffea42ec45deaed380215f8a067f5dd8958f40"
+    purl = "pkg:generic/bellsoft-jdk@25.0.4?arch=ppc64le"
+    sha256 = "73417dd790994804165360a32f6faff628d9ca30e5751d9aa785f684366baac8"
+    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.4+9/bellsoft-jdk25.0.4+9-src.tar.gz"
+    source-sha256 = "21ae9fed223240e8b719415ce79d05815f64580b7ab8994af9a6eaf9cb148e50"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.3+11/bellsoft-jdk25.0.3+11-linux-ppc64le.tar.gz"
-    version = "25.0.3"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.4+9/bellsoft-jdk25.0.4+9-linux-ppc64le.tar.gz"
+    version = "25.0.4"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
