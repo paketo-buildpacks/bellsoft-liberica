@@ -1,6 +1,6 @@
 module github.com/paketo-buildpacks/bellsoft-liberica/v9
 
-go 1.26
+go 1.27
 
 require (
 	github.com/paketo-buildpacks/libjvm v1.46.0
@@ -21,7 +21,7 @@ require (
 	github.com/mattn/go-shellwords v1.0.14 // indirect
 	github.com/miekg/dns v1.1.73 // indirect
 	github.com/mitchellh/hashstructure/v2 v2.0.2 // indirect
-	github.com/onsi/gomega v1.42.1 // indirect
+	github.com/onsi/gomega v1.43.0 // indirect
 	github.com/pavlo-v-chernykh/keystore-go/v4 v4.5.0 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	golang.org/x/crypto v0.55.0 // indirect
