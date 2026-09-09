@@ -606,12 +606,12 @@ api = "0.7"
     cpes = ["cpe:2.3:a:oracle:graalvm:25.0.4:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:25.0.4:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
-    purl = "pkg:generic/bellsoft-nik@25.0.4?arch=arm64"
-    sha256 = "521d98afe50ac55640f5d49cea2c0e7a15c4698b538e254f06d66a53074b655e"
-    source = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.4+1-25.0.4+10/bellsoft-liberica-vm-openjdk25.0.4+10-25.0.4+1-src.tar.gz"
-    source-sha256 = "31d0566fd47d7b035e9c00875049b03a0fc02dfb25af0f95bb52aae4a38a0831"
+    purl = "pkg:generic/bellsoft-nik@25.0.4.1?arch=arm64"
+    sha256 = "9ebc5f8b6fbd3a17b762e416ea267f3b239b0c91ff020572d1c6753aaaaa696b"
+    source = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.4.1+1-25.0.4.1+2/bellsoft-liberica-vm-openjdk25.0.4.1+2-25.0.4.1+1-src.tar.gz"
+    source-sha256 = "d98baeae962e153926f04e9685c070af9041078386152f5e531431ce2f13aa2e"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.4+1-25.0.4+10/bellsoft-liberica-vm-openjdk25.0.4+10-25.0.4+1-linux-aarch64.tar.gz"
+    uri = "https://github.com/bell-sw/LibericaNIK/releases/download/25.0.4.1+1-25.0.4.1+2/bellsoft-liberica-vm-openjdk25.0.4.1+2-25.0.4.1+1-linux-aarch64.tar.gz"
     version = "25.0.4"
 
     [[metadata.dependencies.licenses]]
