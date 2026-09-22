@@ -154,6 +154,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "26"
+- name:            JDK 27
+  id:              jdk
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "27"
+- name:            JRE 27
+  id:              jre
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "27"
 
 # ARM64
 - name:            JDK 8 ARM64
@@ -306,6 +322,24 @@ dependencies:
     type:    jre
     version: "26"
     arch:    arm64
+- name:            JDK 27 ARM64
+  id:              jdk
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "27"
+    arch:    arm64
+- name:            JRE 27 ARM64
+  id:              jre
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "27"
+    arch:    arm64
 
 # PPC64LE
 - name:            JDK 8 PPC64LE
@@ -417,4 +451,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "26"
+    arch:    ppc64le
+- name:            JDK 27 PPC64LE
+  id:              jdk
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jdk
+    version: "27"
+    arch:    ppc64le
+- name:            JRE 27 PPC64LE
+  id:              jre
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
+  uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
+  with:
+    product: liberica
+    type:    jre
+    version: "27"
     arch:    ppc64le
