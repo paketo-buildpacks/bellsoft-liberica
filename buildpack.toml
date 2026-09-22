@@ -379,6 +379,38 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:27.0.0:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@27.0.0?arch=amd64"
+    sha256 = "ec220885317443c16a124affd8e8363e41aaedc2e18e00d4949031afcd41aa02"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-linux-amd64.tar.gz"
+    version = "27.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:27.0.0:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@27.0.0?arch=amd64"
+    sha256 = "ee91e3fb49f34d7981b2872597ae9d2d5f6c8fd8e6e59fa76de9e1d649ab0e52"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jre27+36-linux-amd64.tar.gz"
+    version = "27.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:graalvm:23.1.1:*:*:*:community:*:*:*", "cpe:2.3:a:oracle:jdk:21.0.12:*:*:*:*:*:*:*"]
     id = "native-image-svm"
     name = "BellSoft Liberica NIK"
@@ -651,6 +683,38 @@ api = "0.7"
       uri = "https://openjdk.java.net/legal/gplv2+ce.html"
 
   [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:27.0.0:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@27.0.0?arch=arm64"
+    sha256 = "236d7383e161bf8e7f34a0da4f35ce9db11eb40502bd5ad6a249cc4b57ae031b"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-linux-aarch64.tar.gz"
+    version = "27.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:27.0.0:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@27.0.0?arch=arm64"
+    sha256 = "c72f9edfcac0c7ce842c343ac537dac1d1c79236a7c8d6a7deb4c8b18d262163"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jre27+36-linux-aarch64.tar.gz"
+    version = "27.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
     cpes = ["cpe:2.3:a:oracle:jdk:1.8.0:update504:*:*:*:*:*:*:*"]
     id = "jdk"
     name = "BellSoft Liberica JDK"
@@ -837,6 +901,38 @@ api = "0.7"
     stacks = ["*"]
     uri = "https://github.com/bell-sw/Liberica/releases/download/26.0.2+13/bellsoft-jre26.0.2+13-linux-ppc64le.tar.gz"
     version = "26.0.2"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jdk:27.0.0:*:*:*:*:*:*:*"]
+    id = "jdk"
+    name = "BellSoft Liberica JDK"
+    purl = "pkg:generic/bellsoft-jdk@27.0.0?arch=ppc64le"
+    sha256 = "39b47aaafcda182051cd69ab6cc17f39b805a05b9c10d1796b0538c3b3bfc82a"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-linux-ppc64le.tar.gz"
+    version = "27.0.0"
+
+    [[metadata.dependencies.licenses]]
+      type = "GPL-2.0 WITH Classpath-exception-2.0"
+      uri = "https://openjdk.java.net/legal/gplv2+ce.html"
+
+  [[metadata.dependencies]]
+    cpes = ["cpe:2.3:a:oracle:jre:27.0.0:*:*:*:*:*:*:*"]
+    id = "jre"
+    name = "BellSoft Liberica JRE"
+    purl = "pkg:generic/bellsoft-jre@27.0.0?arch=ppc64le"
+    sha256 = "e86f23791114c78628da051d18f4aa60fd7180b4cdf5810737ffe983723dedee"
+    source = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jdk27+36-src.tar.gz"
+    source-sha256 = "5ede3cee066021b93af3b7f82fff8649d06909cefd016d8e81a0184ffb7af86d"
+    stacks = ["*"]
+    uri = "https://github.com/bell-sw/Liberica/releases/download/27+36/bellsoft-jre27+36-linux-ppc64le.tar.gz"
+    version = "27.0.0"
 
     [[metadata.dependencies.licenses]]
       type = "GPL-2.0 WITH Classpath-exception-2.0"
