@@ -138,22 +138,22 @@ dependencies:
     product: liberica
     type:    jre
     version: "25"
-- name:            JDK 26
+- name:            JDK 27
   id:              jdk
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jdk
-    version: "26"
-- name:            JRE 26
+    version: "27"
+- name:            JRE 27
   id:              jre
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jre
-    version: "26"
+    version: "27"
 - name:            JDK 27
   id:              jdk
   version_pattern: "27\\.[\\d]+\\.[\\d]+"
@@ -304,23 +304,23 @@ dependencies:
     type:    jre
     version: "25"
     arch:    arm64
-- name:            JDK 26 ARM64
+- name:            JDK 27 ARM64
   id:              jdk
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jdk
-    version: "26"
+    version: "27"
     arch:    arm64
-- name:            JRE 26 ARM64
+- name:            JRE 27 ARM64
   id:              jre
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jre
-    version: "26"
+    version: "27"
     arch:    arm64
 - name:            JDK 27 ARM64
   id:              jdk
@@ -434,23 +434,23 @@ dependencies:
     type:    jre
     version: "25"
     arch:    ppc64le
-- name:            JDK 26 PPC64LE
+- name:            JDK 27 PPC64LE
   id:              jdk
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jdk
-    version: "26"
+    version: "27"
     arch:    ppc64le
-- name:            JRE 26 PPC64LE
+- name:            JRE 27 PPC64LE
   id:              jre
-  version_pattern: "26\\.[\\d]+\\.[\\d]+"
+  version_pattern: "27\\.[\\d]+\\.[\\d]+"
   uses:            docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
   with:
     product: liberica
     type:    jre
-    version: "26"
+    version: "27"
     arch:    ppc64le
 - name:            JDK 27 PPC64LE
   id:              jdk
