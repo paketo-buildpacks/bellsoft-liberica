@@ -1,4 +1,4 @@
-name: Update JRE 26 PPC64LE
+name: Update JDK 27 ARM64
 "on":
     schedule:
         - cron: 0 5 * * 1-5
@@ -27,10 +27,10 @@ jobs:
             - id: dependency
               uses: docker://ghcr.io/paketo-buildpacks/actions/bellsoft-liberica-dependency:main
               with:
-                arch: ppc64le
+                arch: arm64
                 product: liberica
-                type: jre
-                version: "26"
+                type: jdk
+                version: "27"
             - name: Update Buildpack Dependency
               id: buildpack
               run: |
@@ -77,10 +77,10 @@ jobs:
                 echo "new-version=${VERSION}" >> "$GITHUB_OUTPUT"
                 echo "version-label=${LABEL}" >> "$GITHUB_OUTPUT"
               env:
-                ARCH: ppc64le
+                ARCH: arm64
                 CPE: ${{ steps.dependency.outputs.cpe }}
                 CPE_PATTERN: ""
-                ID: jre
+                ID: jdk
                 PURL: ${{ steps.dependency.outputs.purl }}
                 PURL_PATTERN: ""
                 SHA256: ${{ steps.dependency.outputs.sha256 }}
@@ -88,18 +88,18 @@ jobs:
                 SOURCE_URI: ${{ steps.dependency.outputs.source }}
                 URI: ${{ steps.dependency.outputs.uri }}
                 VERSION: ${{ steps.dependency.outputs.version }}
-                VERSION_PATTERN: 26\.[\d]+\.[\d]+
+                VERSION_PATTERN: 27\.[\d]+\.[\d]+
             - uses: peter-evans/create-pull-request@v8
               with:
                 author: ${{ secrets.JAVA_GITHUB_USERNAME }} <${{ secrets.JAVA_GITHUB_USERNAME }}@users.noreply.github.com>
-                body: Bumps `JRE 26 PPC64LE` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
-                branch: update/buildpack/jre-26-ppc-64-le
+                body: Bumps `JDK 27 ARM64` from `${{ steps.buildpack.outputs.old-version }}` to `${{ steps.buildpack.outputs.new-version }}`.
+                branch: update/buildpack/jdk-27-arm-64
                 commit-message: |-
-                    Bump JRE 26 PPC64LE from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                    Bump JDK 27 ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
 
-                    Bumps JRE 26 PPC64LE from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
+                    Bumps JDK 27 ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}.
                 delete-branch: true
                 labels: ${{ steps.buildpack.outputs.version-label }}, type:dependency-upgrade
                 signoff: true
-                title: Bump JRE 26 PPC64LE from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
+                title: Bump JDK 27 ARM64 from ${{ steps.buildpack.outputs.old-version }} to ${{ steps.buildpack.outputs.new-version }}
                 token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
