@@ -751,11 +751,11 @@ api = "0.7"
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@21.0.13?arch=ppc64le"
-    sha256 = "131a42101df4f878f9fb6d03dc26bf451363fbae29697e0e4dba354b0317f617"
-    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.13+11/bellsoft-jdk21.0.13+11-src.tar.gz"
-    source-sha256 = "3fea510b9c9c93d5cb98e50a49ed13b0d3f38b686274ceb157c898b292ece52e"
+    sha256 = "8f805eecbb6c494293ca3f1743f99488ff52f72eec2c317cf4c1aa281b345561"
+    source = "https://github.com/bell-sw/Liberica/releases/download/21.0.13.0.2+5/bellsoft-jdk21.0.13.0.2+5-src.tar.gz"
+    source-sha256 = "99aac4c1e0ecd0fb4bcec9217a5be5fc038d27166c6356413ccdcfdd870180c9"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.13+11/bellsoft-jdk21.0.13+11-linux-ppc64le.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/21.0.13.0.2+5/bellsoft-jdk21.0.13.0.2+5-linux-ppc64le.tar.gz"
     version = "21.0.13"
 
     [[metadata.dependencies.licenses]]
