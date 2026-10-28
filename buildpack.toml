@@ -399,11 +399,11 @@ api = "0.7"
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@8.0.492?arch=arm64"
-    sha256 = "0b674cceac04d35aa83340ae276a08291475143982b7c25385163d6cc9c962fc"
-    source = "https://github.com/bell-sw/Liberica/releases/download/8u513+5/bellsoft-jdk8u513+5-src.tar.gz"
-    source-sha256 = "a00d95e6263c1d376fec4d50a5577bec8e036aa41ab4d23ab63692dce985a29e"
+    sha256 = "827a98b1b9e9144cb8f170ae96aafe810d14ddb26e987d855979e85ff7e2eb0c"
+    source = "https://github.com/bell-sw/Liberica/releases/download/8u513+9/bellsoft-jdk8u513+9-src.tar.gz"
+    source-sha256 = "b0ba7abeb475b9d87dc10511d5d7ee0c5bed515c9848021da9191ff56c495412"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u513+5/bellsoft-jdk8u513+5-linux-aarch64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u513+9/bellsoft-jdk8u513+9-linux-aarch64.tar.gz"
     version = "8.0.513"
 
     [[metadata.dependencies.licenses]]
