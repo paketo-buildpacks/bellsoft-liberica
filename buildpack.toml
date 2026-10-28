@@ -159,11 +159,11 @@ api = "0.7"
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@8.0.492?arch=amd64"
-    sha256 = "4778b4cf8e2182a38971ce145fee5f9cb92bff5161d6430238a5f3769c96ed1e"
-    source = "https://github.com/bell-sw/Liberica/releases/download/8u513+5/bellsoft-jdk8u513+5-src.tar.gz"
-    source-sha256 = "a00d95e6263c1d376fec4d50a5577bec8e036aa41ab4d23ab63692dce985a29e"
+    sha256 = "f188847b0ef508755df0106535613d176165c64d1ca4530e83d5a5a20a7a890c"
+    source = "https://github.com/bell-sw/Liberica/releases/download/8u513+9/bellsoft-jdk8u513+9-src.tar.gz"
+    source-sha256 = "b0ba7abeb475b9d87dc10511d5d7ee0c5bed515c9848021da9191ff56c495412"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/8u513+5/bellsoft-jre8u513+5-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/8u513+9/bellsoft-jre8u513+9-linux-amd64.tar.gz"
     version = "8.0.513"
 
     [[metadata.dependencies.licenses]]
