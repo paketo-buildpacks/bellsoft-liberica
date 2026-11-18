@@ -591,11 +591,11 @@ api = "0.7"
     id = "jre"
     name = "BellSoft Liberica JRE"
     purl = "pkg:generic/bellsoft-jre@25.0.5?arch=arm64"
-    sha256 = "5b7e75b779c3f512a838d7dfe7d841bd20516b5c8049f7667092142bc7cf0071"
-    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.5.0.3+5/bellsoft-jdk25.0.5.0.3+5-src.tar.gz"
-    source-sha256 = "cad9906c6290888a6b4caaad46bd51558f2af994f7cc5e4c27ed508ed2173bf8"
+    sha256 = "335eb057b9b9d7e2c2d62c86b3c042be3974808f9592af608542f949accdb3fa"
+    source = "https://github.com/bell-sw/Liberica/releases/download/25.0.5.1+5/bellsoft-jdk25.0.5.1+5-src.tar.gz"
+    source-sha256 = "48ebe67962adc2a7dc815c8231fd228f387b8a62f6c3191f9293f0cd4ba1cfb3"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.5.0.3+5/bellsoft-jre25.0.5.0.3+5-linux-aarch64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/25.0.5.1+5/bellsoft-jre25.0.5.1+5-linux-aarch64.tar.gz"
     version = "25.0.5"
 
     [[metadata.dependencies.licenses]]
