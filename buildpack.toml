@@ -175,11 +175,11 @@ api = "0.7"
     id = "jdk"
     name = "BellSoft Liberica JDK"
     purl = "pkg:generic/bellsoft-jdk@11.0.33?arch=amd64"
-    sha256 = "ddd826eb8a811befcb9016330f17ae6ec6a64f514e260fa48e3d8b357f94ac70"
-    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.33.1+5/bellsoft-jdk11.0.33.1+5-src.tar.gz"
-    source-sha256 = "c8d6bfaefe1df679384ee1bbca7bdb4ff51d6177b2894d8f1729938f1403ba86"
+    sha256 = "164c9e1c250e7db127ac9ba438c5a5dc06468e44aaf60afad182da150199f249"
+    source = "https://github.com/bell-sw/Liberica/releases/download/11.0.33.0.3+7/bellsoft-jdk11.0.33.0.3+7-src.tar.gz"
+    source-sha256 = "1f9550b3f41efdc72bc9a4f8490068b5e2cf0815e34867719087de07f8a3f26b"
     stacks = ["*"]
-    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.33.1+5/bellsoft-jdk11.0.33.1+5-linux-amd64.tar.gz"
+    uri = "https://github.com/bell-sw/Liberica/releases/download/11.0.33.0.3+7/bellsoft-jdk11.0.33.0.3+7-linux-amd64.tar.gz"
     version = "11.0.33"
 
     [[metadata.dependencies.licenses]]
